@@ -1,0 +1,977 @@
+{
+  "hardware": {
+    "python": "3.12.11",
+    "torch": "2.15.0",
+    "thop": "0.1.1-2209072238",
+    "fvcore": "0.1.5.post20221221",
+    "mps_available": true,
+    "cuda_device": null,
+    "torch_num_threads": 10,
+    "cpu": "Apple M4 Pro",
+    "ncpu": "14",
+    "perf_cores": "10",
+    "eff_cores": "4",
+    "mem_bytes": "25769803776",
+    "macos": "15.7 (24G222)"
+  },
+  "protocol": {
+    "latency": "batch 1, 20 warm-up + 100 timed forward passes, torch.inference_mode, eval mode, fp32, random input, device synchronised before and after each timed call; median and IQR",
+    "throughput": "batch 16, 3 warm-up + up to 30 timed passes (stops after 20 s, min 3), images/s = 16*n/elapsed",
+    "macs": "thop.profile at batch 1; fvcore FlopCountAnalysis at batch 1 (one multiply-add = one op, i.e. MACs); per-call counter fin.efficiency.opcount (conv, transposed conv on its input grid, linear, matmul, attention; every executed call counted once); FLOPs = 2 x MACs",
+    "params": "trainable parameters (requires_grad)",
+    "memory": "MPS: weights (current_allocated delta) and driver_allocated delta after one batch-1 / batch-16 forward pass; approximate peak"
+  },
+  "models": [
+    {
+      "task": "classification",
+      "name": "DeepFetalNet",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "loadavg_start": [
+        8.26513671875,
+        7.27685546875,
+        6.6064453125
+      ],
+      "params": 659433,
+      "params_total": 659433,
+      "thop_MACs": 108401237.0,
+      "thop_GMACs": 0.108401237,
+      "GFLOPs_2xMACs": 0.216802474,
+      "percall_GMACs": 0.11251316,
+      "percall_breakdown_GMACs": {
+        "conv": 0.104159496,
+        "linear": 0.000225152,
+        "mha": 0.008128512
+      },
+      "fvcore_GMACs": 0.10680564,
+      "fvcore_unsupported_ops": {
+        "aten::sigmoid": 6,
+        "aten::expand_as": 6,
+        "aten::mul": 11,
+        "aten::softmax": 2,
+        "aten::add": 6,
+        "aten::_native_multi_head_attention": 1,
+        "aten::mean": 1
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 1.425020513124764,
+          "q1_ms": 1.3806358037982136,
+          "q3_ms": 1.476718724006787,
+          "iqr_ms": 0.09608292020857334,
+          "mean_ms": 1.4498454506974667,
+          "sd_ms": 0.12398817899305377,
+          "min_ms": 1.3046669773757458,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 31.941750028636307,
+          "q1_ms": 29.437812248943374,
+          "q3_ms": 32.34335395973176,
+          "iqr_ms": 2.905541710788384,
+          "mean_ms": 31.26537039061077,
+          "sd_ms": 2.390773316956437,
+          "min_ms": 26.26137505285442,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 3667.0065336313846,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 22.95372370139286,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        9.11376953125,
+        7.5693359375,
+        6.73388671875
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 2.52392578125,
+        "driver_alloc_delta_MB": 42.109375,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 2.52392578125,
+        "driver_alloc_delta_MB": 1068.109375,
+        "batch": 16
+      }
+    },
+    {
+      "task": "classification",
+      "name": "PSFHSP-Net",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "loadavg_start": [
+        9.11376953125,
+        7.5693359375,
+        6.73388671875
+      ],
+      "params": 387906,
+      "params_total": 387906,
+      "thop_MACs": 767994240.0,
+      "thop_GMACs": 0.76799424,
+      "GFLOPs_2xMACs": 1.53598848,
+      "percall_GMACs": 0.760267008,
+      "percall_breakdown_GMACs": {
+        "conv": 0.760266752,
+        "linear": 2.56e-07
+      },
+      "fvcore_GMACs": 0.764180736,
+      "fvcore_unsupported_ops": {
+        "aten::max_pool2d": 1,
+        "aten::add_": 3
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 1.0472079738974571,
+          "q1_ms": 1.0226971935480833,
+          "q3_ms": 1.1057393276132643,
+          "iqr_ms": 0.08304213406518102,
+          "mean_ms": 1.0772165982052684,
+          "sd_ms": 0.11224969117759255,
+          "min_ms": 0.9376669768244028,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 5.664395575877279,
+          "q1_ms": 5.341187032172456,
+          "q3_ms": 5.861759971594438,
+          "iqr_ms": 0.5205729394219816,
+          "mean_ms": 5.648540826514363,
+          "sd_ms": 0.4266716415337248,
+          "min_ms": 4.614833975210786,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 2051.066207922955,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 90.36692359693711,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        9.4248046875,
+        7.6591796875,
+        6.7705078125
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 1.4873046875,
+        "driver_alloc_delta_MB": 42.0,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 1.4873046875,
+        "driver_alloc_delta_MB": 1064.0,
+        "batch": 16
+      }
+    },
+    {
+      "task": "classification",
+      "name": "ResNet-152",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "loadavg_start": [
+        9.7109375,
+        7.74755859375,
+        6.806640625
+      ],
+      "params": 58147906,
+      "params_total": 58147906,
+      "thop_MACs": 11601901568.0,
+      "thop_GMACs": 11.601901568,
+      "GFLOPs_2xMACs": 23.203803136,
+      "percall_GMACs": 11.51158272,
+      "percall_breakdown_GMACs": {
+        "conv": 11.511578624,
+        "linear": 4.096e-06
+      },
+      "fvcore_GMACs": 11.556791296,
+      "fvcore_unsupported_ops": {
+        "aten::max_pool2d": 1,
+        "aten::add_": 50
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 13.844167056959122,
+          "q1_ms": 13.179542234865949,
+          "q3_ms": 14.29521877435036,
+          "iqr_ms": 1.1156765394844115,
+          "mean_ms": 13.837828771211207,
+          "sd_ms": 0.7041659543429821,
+          "min_ms": 12.689625029452145,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 50.23710452951491,
+          "q1_ms": 48.93771844217554,
+          "q3_ms": 52.058572764508426,
+          "iqr_ms": 3.120854322332889,
+          "mean_ms": 50.89361753081903,
+          "sd_ms": 3.110890839290984,
+          "min_ms": 45.436999993398786,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 169.4507159839856,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 6.952136435575184,
+          "batch": 16,
+          "reps": 9,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        8.5849609375,
+        7.72509765625,
+        6.84130859375
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 224.432373046875,
+        "driver_alloc_delta_MB": 264.0,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 224.432373046875,
+        "driver_alloc_delta_MB": 1272.0,
+        "batch": 16
+      }
+    },
+    {
+      "task": "classification",
+      "name": "SqueezeNet 1.1",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "loadavg_start": [
+        8.5849609375,
+        7.72509765625,
+        6.84130859375
+      ],
+      "params": 723522,
+      "params_total": 723522,
+      "thop_MACs": 262797332.0,
+      "thop_GMACs": 0.262797332,
+      "GFLOPs_2xMACs": 0.525594664,
+      "percall_GMACs": 0.262796992,
+      "percall_breakdown_GMACs": {
+        "conv": 0.262796992
+      },
+      "fvcore_GMACs": 0.26279733,
+      "fvcore_unsupported_ops": {
+        "aten::max_pool2d": 3
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 1.02327048080042,
+          "q1_ms": 0.9879995486699045,
+          "q3_ms": 1.0643432615324855,
+          "iqr_ms": 0.07634371286258101,
+          "mean_ms": 1.031863345997408,
+          "sd_ms": 0.05871246027892958,
+          "min_ms": 0.9235830511897802,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 6.466771010309458,
+          "q1_ms": 5.45709376456216,
+          "q3_ms": 7.257479446707293,
+          "iqr_ms": 1.8003856821451336,
+          "mean_ms": 6.5409941598773,
+          "sd_ms": 1.3332079122187501,
+          "min_ms": 4.556209081783891,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 2683.8432633962097,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 94.27571369314639,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        8.4580078125,
+        7.712890625,
+        6.841796875
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 2.760986328125,
+        "driver_alloc_delta_MB": 42.0,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 2.760986328125,
+        "driver_alloc_delta_MB": 1064.0,
+        "batch": 16
+      }
+    },
+    {
+      "task": "classification",
+      "name": "ShuffleNetV2",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "loadavg_start": [
+        8.4580078125,
+        7.712890625,
+        6.841796875
+      ],
+      "params": 1255654,
+      "params_total": 1255654,
+      "thop_MACs": 151738040.0,
+      "thop_GMACs": 0.15173804,
+      "GFLOPs_2xMACs": 0.30347608,
+      "percall_GMACs": 0.14388604,
+      "percall_breakdown_GMACs": {
+        "conv": 0.143883992,
+        "linear": 2.048e-06
+      },
+      "fvcore_GMACs": 0.147836616,
+      "fvcore_unsupported_ops": {
+        "aten::max_pool2d": 1
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 4.846103955060244,
+          "q1_ms": 4.65218725730665,
+          "q3_ms": 5.018750292947516,
+          "iqr_ms": 0.36656303564086556,
+          "mean_ms": 4.977161289425567,
+          "sd_ms": 0.8751164848227313,
+          "min_ms": 4.3180829379707575,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 36.82618757011369,
+          "q1_ms": 35.72256225743331,
+          "q3_ms": 37.58893776102923,
+          "iqr_ms": 1.8663755035959184,
+          "mean_ms": 38.25241416459903,
+          "sd_ms": 14.923985510693264,
+          "min_ms": 32.09654102101922,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 2608.3111387562653,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 25.050734914166043,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        8.4501953125,
+        7.759765625,
+        6.88671875
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 4.885009765625,
+        "driver_alloc_delta_MB": 42.109375,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 4.885009765625,
+        "driver_alloc_delta_MB": 1064.109375,
+        "batch": 16
+      }
+    },
+    {
+      "task": "classification",
+      "name": "MobileNetV2",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "loadavg_start": [
+        8.4501953125,
+        7.759765625,
+        6.88671875
+      ],
+      "params": 2226434,
+      "params_total": 2226434,
+      "thop_MACs": 326209280.0,
+      "thop_GMACs": 0.32620928,
+      "GFLOPs_2xMACs": 0.65241856,
+      "percall_GMACs": 0.299496832,
+      "percall_breakdown_GMACs": {
+        "conv": 0.299494272,
+        "linear": 2.56e-06
+      },
+      "fvcore_GMACs": 0.312853056,
+      "fvcore_unsupported_ops": {
+        "aten::hardtanh_": 35,
+        "aten::add": 10,
+        "aten::mean": 1
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 4.53774951165542,
+          "q1_ms": 4.28014574572444,
+          "q3_ms": 4.766489990288392,
+          "iqr_ms": 0.4863442445639521,
+          "mean_ms": 4.56876918207854,
+          "sd_ms": 0.3366005243657441,
+          "min_ms": 4.111374961212277,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 49.05381245771423,
+          "q1_ms": 46.15203180583194,
+          "q3_ms": 49.82425004709512,
+          "iqr_ms": 3.672218241263181,
+          "mean_ms": 48.44354212167673,
+          "sd_ms": 3.2883976051206525,
+          "min_ms": 42.86991700064391,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 1416.9938636478082,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 12.775001651357513,
+          "batch": 16,
+          "reps": 17,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        10.09228515625,
+        8.20166015625,
+        7.07470703125
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 8.663818359375,
+        "driver_alloc_delta_MB": 50.15625,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 8.663818359375,
+        "driver_alloc_delta_MB": 1072.15625,
+        "batch": 16
+      }
+    },
+    {
+      "task": "classification",
+      "name": "MobileNetV3",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "loadavg_start": [
+        10.09228515625,
+        8.20166015625,
+        7.07470703125
+      ],
+      "params": 4204594,
+      "params_total": 4204594,
+      "thop_MACs": 233561016.0,
+      "thop_GMACs": 0.233561016,
+      "GFLOPs_2xMACs": 0.467122032,
+      "percall_GMACs": 0.21531232,
+      "percall_breakdown_GMACs": {
+        "conv": 0.21408096,
+        "linear": 0.00123136
+      },
+      "fvcore_GMACs": 0.224756384,
+      "fvcore_unsupported_ops": {
+        "aten::hardswish_": 21,
+        "aten::add_": 10,
+        "aten::hardsigmoid": 8,
+        "aten::mul": 8,
+        "aten::dropout_": 1
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 4.4533960171975195,
+          "q1_ms": 4.321187676396221,
+          "q3_ms": 4.557072534225881,
+          "iqr_ms": 0.23588485782966018,
+          "mean_ms": 4.43517041625455,
+          "sd_ms": 0.1989146995867753,
+          "min_ms": 3.900166950188577,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 134.53416695119813,
+          "q1_ms": 133.17434370401315,
+          "q3_ms": 136.6187712410465,
+          "iqr_ms": 3.4444275370333344,
+          "mean_ms": 136.7374354240019,
+          "sd_ms": 11.00511257722847,
+          "min_ms": 127.25158303510398,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 1769.758425568887,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 6.883421493130367,
+          "batch": 16,
+          "reps": 9,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        10.1005859375,
+        8.431640625,
+        7.21875
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 16.22802734375,
+        "driver_alloc_delta_MB": 58.1875,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 16.22802734375,
+        "driver_alloc_delta_MB": 1072.1875,
+        "batch": 16
+      }
+    },
+    {
+      "task": "segmentation",
+      "name": "U-Net",
+      "input_shape": [
+        1,
+        1,
+        256,
+        256
+      ],
+      "loadavg_start": [
+        10.1005859375,
+        8.431640625,
+        7.21875
+      ],
+      "params": 31036611,
+      "params_total": 31036611,
+      "thop_MACs": 54670655488.0,
+      "thop_GMACs": 54.670655488,
+      "GFLOPs_2xMACs": 109.341310976,
+      "percall_GMACs": 48.100278272,
+      "percall_breakdown_GMACs": {
+        "conv": 45.952794624,
+        "conv_transpose": 2.147483648
+      },
+      "fvcore_GMACs": 48.164241408,
+      "fvcore_unsupported_ops": {
+        "aten::max_pool2d": 4
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 17.63533294433728,
+          "q1_ms": 17.588010523468256,
+          "q3_ms": 17.755145468981937,
+          "iqr_ms": 0.16713494551368058,
+          "mean_ms": 17.76474039303139,
+          "sd_ms": 0.5003901979035017,
+          "min_ms": 17.44645810686052,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 171.6325210290961,
+          "q1_ms": 167.76723903603852,
+          "q3_ms": 178.26747946674004,
+          "iqr_ms": 10.500240430701524,
+          "mean_ms": 175.5086666182615,
+          "sd_ms": 13.983845260322108,
+          "min_ms": 160.26475001126528,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 58.15589445459948,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 4.577684567679363,
+          "batch": 16,
+          "reps": 6,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        9.50634765625,
+        8.45263671875,
+        7.30615234375
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 119.06982421875,
+        "driver_alloc_delta_MB": 1074.0625,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 119.06982421875,
+        "driver_alloc_delta_MB": 2088.0625,
+        "batch": 16
+      }
+    },
+    {
+      "task": "segmentation",
+      "name": "FAT-Net",
+      "input_shape": [
+        1,
+        1,
+        256,
+        256
+      ],
+      "loadavg_start": [
+        9.50634765625,
+        8.45263671875,
+        7.30615234375
+      ],
+      "params": 28759235,
+      "params_total": 28759235,
+      "thop_MACs": 55934452736.0,
+      "thop_GMACs": 55.934452736,
+      "GFLOPs_2xMACs": 111.868905472,
+      "percall_GMACs": 30.049173504,
+      "percall_breakdown_GMACs": {
+        "conv": 27.737980928,
+        "linear": 1.359085568,
+        "sdpa": 0.301989888,
+        "conv_transpose": 0.65011712
+      },
+      "fvcore_GMACs": 29.792075776,
+      "fvcore_unsupported_ops": {
+        "aten::sub": 1,
+        "aten::div": 1,
+        "aten::add_": 16,
+        "aten::scaled_dot_product_attention": 12,
+        "aten::add": 39,
+        "aten::gelu": 12,
+        "aten::sigmoid": 1,
+        "aten::mul": 1
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 13.46656249370426,
+          "q1_ms": 13.438062742352486,
+          "q3_ms": 13.556583260651678,
+          "iqr_ms": 0.11852051829919219,
+          "mean_ms": 13.504989568609744,
+          "sd_ms": 0.10665940923709198,
+          "min_ms": 13.362583005800843,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 116.95118702482432,
+          "q1_ms": 115.0618540123105,
+          "q3_ms": 121.10887476592325,
+          "iqr_ms": 6.047020753612742,
+          "mean_ms": 119.5613366807811,
+          "sd_ms": 10.045982024628604,
+          "min_ms": 108.96108392626047,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 85.0582279420156,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 3.8483562206497686,
+          "batch": 16,
+          "reps": 5,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        8.53955078125,
+        8.310546875,
+        7.31982421875
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 110.546142578125,
+        "driver_alloc_delta_MB": 184.0625,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 110.546142578125,
+        "driver_alloc_delta_MB": 1152.0625,
+        "batch": 16
+      }
+    },
+    {
+      "task": "segmentation",
+      "name": "MALUNet",
+      "input_shape": [
+        1,
+        1,
+        256,
+        256
+      ],
+      "loadavg_start": [
+        8.255859375,
+        8.25537109375,
+        7.30615234375
+      ],
+      "params": 177817,
+      "params_total": 177817,
+      "thop_MACs": 73797760.0,
+      "thop_GMACs": 0.07379776,
+      "GFLOPs_2xMACs": 0.14759552,
+      "percall_GMACs": 0.073565184,
+      "percall_breakdown_GMACs": {
+        "conv": 0.0735488,
+        "linear": 1.6384e-05
+      },
+      "fvcore_GMACs": 0.081712128,
+      "fvcore_unsupported_ops": {
+        "aten::max_pool2d": 5,
+        "aten::gelu": 35,
+        "aten::mul": 22,
+        "aten::softmax": 6,
+        "aten::sum": 6,
+        "aten::add": 33,
+        "aten::div": 6,
+        "aten::sigmoid": 16,
+        "aten::mean": 5,
+        "aten::expand_as": 5
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 4.0968540124595165,
+          "q1_ms": 3.964822768466547,
+          "q3_ms": 4.251103731803596,
+          "iqr_ms": 0.2862809633370489,
+          "mean_ms": 4.207729188492522,
+          "sd_ms": 0.5427845415963873,
+          "min_ms": 3.757250029593706,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 27.45483350008726,
+          "q1_ms": 24.753135221544653,
+          "q3_ms": 28.65197919891216,
+          "iqr_ms": 3.8988439773675054,
+          "mean_ms": 27.00981380068697,
+          "sd_ms": 2.423223377101771,
+          "min_ms": 22.151125012896955,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 1707.8219132723232,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 24.42716708232545,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        7.64599609375,
+        8.10693359375,
+        7.27880859375
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 0.7041015625,
+        "driver_alloc_delta_MB": 42.375,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 0.7041015625,
+        "driver_alloc_delta_MB": 1080.375,
+        "batch": 16
+      }
+    },
+    {
+      "task": "segmentation",
+      "name": "AoP-GAU-Net",
+      "input_shape": [
+        1,
+        1,
+        256,
+        256
+      ],
+      "loadavg_start": [
+        7.64599609375,
+        8.10693359375,
+        7.27880859375
+      ],
+      "params": 7795211,
+      "params_total": 7795211,
+      "thop_MACs": 8086117440.0,
+      "thop_GMACs": 8.08611744,
+      "GFLOPs_2xMACs": 16.17223488,
+      "percall_GMACs": 7.925337152,
+      "percall_breakdown_GMACs": {
+        "conv": 7.849771008,
+        "matmul": 0.025165824,
+        "linear": 0.05040032
+      },
+      "fvcore_GMACs": 8.006906944,
+      "fvcore_unsupported_ops": {
+        "aten::max_pool2d": 4,
+        "aten::sigmoid": 8,
+        "aten::mul": 17,
+        "aten::linalg_vector_norm": 1,
+        "aten::clamp_min": 1,
+        "aten::expand_as": 1,
+        "aten::div": 3,
+        "aten::softmax": 3,
+        "aten::add": 9,
+        "aten::linspace": 2,
+        "aten::meshgrid": 1,
+        "aten::sum": 4,
+        "aten::sub": 1,
+        "aten::diagonal": 1,
+        "aten::fill_": 1,
+        "aten::topk": 1,
+        "aten::feature_dropout": 1
+      },
+      "latency": {
+        "mps": {
+          "median_ms": 8.507979044225067,
+          "q1_ms": 8.331322984304279,
+          "q3_ms": 8.803489588899538,
+          "iqr_ms": 0.47216660459525883,
+          "mean_ms": 8.622279190458357,
+          "sd_ms": 0.3944147797206578,
+          "min_ms": 8.130500093102455,
+          "n": 100,
+          "warmup": 20
+        },
+        "cpu": {
+          "median_ms": 66.41039601527154,
+          "q1_ms": 64.72615615348332,
+          "q3_ms": 68.1573438050691,
+          "iqr_ms": 3.4311876515857875,
+          "mean_ms": 66.76908088498749,
+          "sd_ms": 3.23238042780203,
+          "min_ms": 61.76558299921453,
+          "n": 100,
+          "warmup": 20
+        }
+      },
+      "throughput_b16": {
+        "mps": {
+          "images_per_s": 137.40690248755337,
+          "batch": 16,
+          "reps": 30,
+          "warmup": 3
+        },
+        "cpu": {
+          "images_per_s": 4.693943103630991,
+          "batch": 16,
+          "reps": 6,
+          "warmup": 3
+        }
+      },
+      "loadavg_end": [
+        8.86572265625,
+        8.38232421875,
+        7.42236328125
+      ],
+      "mps_memory_b1": {
+        "weights_MB": 29.810546875,
+        "driver_alloc_delta_MB": 1146.203125,
+        "batch": 1
+      },
+      "mps_memory_b16": {
+        "weights_MB": 29.810546875,
+        "driver_alloc_delta_MB": 2096.203125,
+        "batch": 16
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "model": "aopgaunet",
+ "params": 7795211,
+ "n_train": 2994,
+ "n_val": 370,
+ "args": {
+  "model": "aopgaunet",
+  "seed": 1,
+  "out": "$FIN_WORK/runs/seg/aopgaunet/seed1",
+  "epochs": 60,
+  "patience": 10,
+  "bs": 8,
+  "lr": 0.0003,
+  "wd": 0.0001,
+  "train_set": "seg",
+  "subset": 0,
+  "time_epochs": 0,
+  "device": "cuda"
+ },
+ "ref_col": "aop_ref_challenge_code"
+}

@@ -1,0 +1,5 @@
+# Tests, linting and the optional git hooks (CI installs this file); same pins as the `dev` extra of pyproject.toml.
+# The package itself is installed with `pip install -e .`
+pytest==9.2.0
+ruff==0.15.12
+pre-commit==4.6.2

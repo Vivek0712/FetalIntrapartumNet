@@ -1,0 +1,20 @@
+# working data, environments, caches and checkpoints (see docs/DATA.md); FIN_WORK defaults to ./work
+work/
+env/
+.venv/
+*.pt
+*.pth
+*.npy
+# small prediction files of the reported runs are part of results/
+*.npz
+!results/runs/**/*.npz
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+# OS
+.DS_Store

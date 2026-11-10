@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "FetalIntrapartumNet: official code"
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/Vivek0712/FetalIntrapartumNet"
+authors:
+  - family-names: Lakshmanan
+    given-names: B
+    affiliation: "Department of Computer Science and Engineering, Mepco Schlenk Engineering College, Sivakasi, Tamil Nadu, India"
+  - family-names: P S
+    given-names: Vivek Raja
+    affiliation: "Aivar Innovations, Bengaluru, Karnataka, India"
+  - family-names: Yuvaraj
+    given-names: J Aron
+    affiliation: "Department of Computer Science and Engineering, Mepco Schlenk Engineering College, Sivakasi, Tamil Nadu, India"
+  - family-names: Nitharsan
+    given-names: M P
+    affiliation: "Department of Computer Science and Engineering, Mepco Schlenk Engineering College, Sivakasi, Tamil Nadu, India"
+preferred-citation:
+  type: article
+  title: "FetalIntrapartumNet: a controlled evaluation of standard-plane selection, segmentation and angle-of-progression measurement in intrapartum transperineal ultrasound"
+  journal: "Sadhana"
+  status: submitted
+  year: 2026
+  authors:
+    - family-names: Lakshmanan
+      given-names: B
+    - family-names: P S
+      given-names: Vivek Raja
+    - family-names: Yuvaraj
+      given-names: J Aron
+    - family-names: Nitharsan
+      given-names: M P

@@ -1,0 +1,118 @@
+{
+ "k": 5,
+ "draws": 20000,
+ "seed": 42,
+ "test_cost": 0.12942963380143477,
+ "folds": [
+  {
+   "fold": 0,
+   "val_cost": 0.0015084259347132836,
+   "test": {
+    "patients": 5,
+    "videos": 7,
+    "frames": 1246,
+    "standard_share": 0.64
+   },
+   "train": {
+    "patients": 38,
+    "videos": 62,
+    "frames": 4355,
+    "standard_share": 0.59
+   },
+   "val": {
+    "patients": 8,
+    "videos": 9,
+    "frames": 623,
+    "standard_share": 0.602
+   }
+  },
+  {
+   "fold": 1,
+   "val_cost": 0.0015084259347132836,
+   "test": {
+    "patients": 10,
+    "videos": 17,
+    "frames": 1243,
+    "standard_share": 0.608
+   },
+   "train": {
+    "patients": 35,
+    "videos": 51,
+    "frames": 4358,
+    "standard_share": 0.599
+   },
+   "val": {
+    "patients": 6,
+    "videos": 10,
+    "frames": 623,
+    "standard_share": 0.602
+   }
+  },
+  {
+   "fold": 2,
+   "val_cost": 0.0015084259347132836,
+   "test": {
+    "patients": 12,
+    "videos": 18,
+    "frames": 1251,
+    "standard_share": 0.543
+   },
+   "train": {
+    "patients": 34,
+    "videos": 51,
+    "frames": 4350,
+    "standard_share": 0.618
+   },
+   "val": {
+    "patients": 5,
+    "videos": 9,
+    "frames": 623,
+    "standard_share": 0.602
+   }
+  },
+  {
+   "fold": 3,
+   "val_cost": 0.0015084259347132836,
+   "test": {
+    "patients": 13,
+    "videos": 19,
+    "frames": 1244,
+    "standard_share": 0.605
+   },
+   "train": {
+    "patients": 31,
+    "videos": 49,
+    "frames": 4357,
+    "standard_share": 0.6
+   },
+   "val": {
+    "patients": 7,
+    "videos": 10,
+    "frames": 623,
+    "standard_share": 0.602
+   }
+  },
+  {
+   "fold": 4,
+   "val_cost": 0.0015084259347132836,
+   "test": {
+    "patients": 11,
+    "videos": 17,
+    "frames": 1240,
+    "standard_share": 0.612
+   },
+   "train": {
+    "patients": 35,
+    "videos": 52,
+    "frames": 4361,
+    "standard_share": 0.598
+   },
+   "val": {
+    "patients": 5,
+    "videos": 9,
+    "frames": 623,
+    "standard_share": 0.602
+   }
+  }
+ ]
+}

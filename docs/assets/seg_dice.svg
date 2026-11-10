@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="332" viewBox="0 0 860 332" role="img" aria-label="Segmentation Dice of the fetal head and pubic symphysis">
+<title>Segmentation Dice of the fetal head and pubic symphysis</title>
+<style>
+svg { --surface: #ffffff; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7;
+      --card: #f6f8fa; --line: #d0d7de; --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface: #0d1117; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+        --card: #161b22; --line: #30363d; --s1: #3987e5; --s2: #d95926; --s3: #199e70; }
+}
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--ink2); font-size: 12px; }
+.title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+.sub { fill: var(--ink2); font-size: 12px; }
+.lab { fill: var(--ink); font-size: 12.5px; }
+.val { fill: var(--ink2); font-size: 11.5px; font-variant-numeric: tabular-nums;
+       paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.axis { stroke: var(--axis); stroke-width: 1; }
+.ref { stroke: var(--ink2); stroke-width: 1.5; }
+.floor { stroke: var(--muted); stroke-width: 1.5; }
+.ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+<text x="20.0" y="26.0" class="title" text-anchor="start">FH / PS segmentation</text>
+<text x="20.0" y="46.0" class="sub" text-anchor="start">Per-image Dice (%) · small dots: seeds · large dot and bar: mean ± SD</text>
+<circle cx="25.0" cy="68.0" r="5" style="fill: var(--s1)"/>
+<text x="35.0" y="72.0" class="lab" text-anchor="start">Fetal head (FH)</text>
+<circle cx="170.0" cy="68.0" r="5" style="fill: var(--s2)"/>
+<text x="180.0" y="72.0" class="lab" text-anchor="start">Pubic symphysis (PS)</text>
+<text x="120.0" y="102.0" class="lab" text-anchor="start" style="font-weight: 600">JNU-IFM test</text>
+<line x1="120.0" y1="112.0" x2="120.0" y2="288.0" class="grid"/>
+<text x="120.0" y="304.0" class="tick" text-anchor="middle">70</text>
+<line x1="175.8" y1="112.0" x2="175.8" y2="288.0" class="grid"/>
+<text x="175.8" y="304.0" class="tick" text-anchor="middle">75</text>
+<line x1="231.7" y1="112.0" x2="231.7" y2="288.0" class="grid"/>
+<text x="231.7" y="304.0" class="tick" text-anchor="middle">80</text>
+<line x1="287.5" y1="112.0" x2="287.5" y2="288.0" class="grid"/>
+<text x="287.5" y="304.0" class="tick" text-anchor="middle">85</text>
+<line x1="343.3" y1="112.0" x2="343.3" y2="288.0" class="grid"/>
+<text x="343.3" y="304.0" class="tick" text-anchor="middle">90</text>
+<line x1="399.2" y1="112.0" x2="399.2" y2="288.0" class="grid"/>
+<text x="399.2" y="304.0" class="tick" text-anchor="middle">95</text>
+<line x1="455.0" y1="112.0" x2="455.0" y2="288.0" class="grid"/>
+<text x="455.0" y="304.0" class="tick" text-anchor="middle">100</text>
+<text x="108.0" y="138.0" class="lab" text-anchor="end">AoP-GAU-Net</text>
+<line x1="380.5" y1="127.0" x2="385.2" y2="127.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="384.4" cy="127.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>AoP-GAU-Net, JNU-IFM test, FH, seed 0: 93.7%</title></circle>
+<circle cx="383.9" cy="127.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>AoP-GAU-Net, JNU-IFM test, FH, seed 1: 93.6%</title></circle>
+<circle cx="380.1" cy="127.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>AoP-GAU-Net, JNU-IFM test, FH, seed 2: 93.3%</title></circle>
+<circle cx="382.8" cy="127.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>AoP-GAU-Net, JNU-IFM test, FH: 93.5 ± 0.2%</title></circle>
+<line x1="277.7" y1="141.0" x2="307.2" y2="141.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="292.7" cy="141.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>AoP-GAU-Net, JNU-IFM test, PS, seed 0: 85.5%</title></circle>
+<circle cx="307.1" cy="141.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>AoP-GAU-Net, JNU-IFM test, PS, seed 1: 86.8%</title></circle>
+<circle cx="277.6" cy="141.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>AoP-GAU-Net, JNU-IFM test, PS, seed 2: 84.1%</title></circle>
+<circle cx="292.4" cy="141.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>AoP-GAU-Net, JNU-IFM test, PS: 85.4 ± 1.3%</title></circle>
+<text x="108.0" y="182.0" class="lab" text-anchor="end">U-Net</text>
+<line x1="367.1" y1="171.0" x2="394.2" y2="171.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="388.7" cy="171.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>U-Net, JNU-IFM test, FH, seed 0: 94.1%</title></circle>
+<circle cx="365.0" cy="171.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>U-Net, JNU-IFM test, FH, seed 1: 91.9%</title></circle>
+<circle cx="388.2" cy="171.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>U-Net, JNU-IFM test, FH, seed 2: 94.0%</title></circle>
+<circle cx="380.7" cy="171.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>U-Net, JNU-IFM test, FH: 93.3 ± 1.2%</title></circle>
+<line x1="278.8" y1="185.0" x2="301.2" y2="185.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="299.0" cy="185.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>U-Net, JNU-IFM test, PS, seed 0: 86.0%</title></circle>
+<circle cx="277.4" cy="185.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>U-Net, JNU-IFM test, PS, seed 1: 84.1%</title></circle>
+<circle cx="293.7" cy="185.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>U-Net, JNU-IFM test, PS, seed 2: 85.6%</title></circle>
+<circle cx="290.0" cy="185.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>U-Net, JNU-IFM test, PS: 85.2 ± 1.0%</title></circle>
+<text x="108.0" y="226.0" class="lab" text-anchor="end">FAT-Net</text>
+<line x1="383.4" y1="215.0" x2="389.2" y2="215.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="385.5" cy="215.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>FAT-Net, JNU-IFM test, FH, seed 0: 93.8%</title></circle>
+<circle cx="389.5" cy="215.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>FAT-Net, JNU-IFM test, FH, seed 1: 94.1%</title></circle>
+<circle cx="383.9" cy="215.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>FAT-Net, JNU-IFM test, FH, seed 2: 93.6%</title></circle>
+<circle cx="386.3" cy="215.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>FAT-Net, JNU-IFM test, FH: 93.8 ± 0.3%</title></circle>
+<line x1="296.0" y1="229.0" x2="320.4" y2="229.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="296.1" cy="229.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>FAT-Net, JNU-IFM test, PS, seed 0: 85.8%</title></circle>
+<circle cx="308.1" cy="229.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>FAT-Net, JNU-IFM test, PS, seed 1: 86.8%</title></circle>
+<circle cx="320.5" cy="229.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>FAT-Net, JNU-IFM test, PS, seed 2: 88.0%</title></circle>
+<circle cx="308.2" cy="229.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>FAT-Net, JNU-IFM test, PS: 86.9 ± 1.1%</title></circle>
+<text x="108.0" y="270.0" class="lab" text-anchor="end">MALUNet</text>
+<line x1="346.5" y1="259.0" x2="365.4" y2="259.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="350.7" cy="259.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MALUNet, JNU-IFM test, FH, seed 0: 90.7%</title></circle>
+<circle cx="366.8" cy="259.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MALUNet, JNU-IFM test, FH, seed 1: 92.1%</title></circle>
+<circle cx="350.2" cy="259.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MALUNet, JNU-IFM test, FH, seed 2: 90.6%</title></circle>
+<circle cx="355.9" cy="259.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>MALUNet, JNU-IFM test, FH: 91.1 ± 0.8%</title></circle>
+<line x1="179.2" y1="273.0" x2="267.0" y2="273.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="218.7" cy="273.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>MALUNet, JNU-IFM test, PS, seed 0: 78.8%</title></circle>
+<circle cx="269.0" cy="273.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>MALUNet, JNU-IFM test, PS, seed 1: 83.3%</title></circle>
+<circle cx="181.5" cy="273.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>MALUNet, JNU-IFM test, PS, seed 2: 75.5%</title></circle>
+<circle cx="223.1" cy="273.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>MALUNet, JNU-IFM test, PS: 79.2 ± 3.9%</title></circle>
+<text x="495.0" y="102.0" class="lab" text-anchor="start" style="font-weight: 600">IUGC 2024 test</text>
+<line x1="495.0" y1="112.0" x2="495.0" y2="288.0" class="grid"/>
+<text x="495.0" y="304.0" class="tick" text-anchor="middle">70</text>
+<line x1="550.8" y1="112.0" x2="550.8" y2="288.0" class="grid"/>
+<text x="550.8" y="304.0" class="tick" text-anchor="middle">75</text>
+<line x1="606.7" y1="112.0" x2="606.7" y2="288.0" class="grid"/>
+<text x="606.7" y="304.0" class="tick" text-anchor="middle">80</text>
+<line x1="662.5" y1="112.0" x2="662.5" y2="288.0" class="grid"/>
+<text x="662.5" y="304.0" class="tick" text-anchor="middle">85</text>
+<line x1="718.3" y1="112.0" x2="718.3" y2="288.0" class="grid"/>
+<text x="718.3" y="304.0" class="tick" text-anchor="middle">90</text>
+<line x1="774.2" y1="112.0" x2="774.2" y2="288.0" class="grid"/>
+<text x="774.2" y="304.0" class="tick" text-anchor="middle">95</text>
+<line x1="830.0" y1="112.0" x2="830.0" y2="288.0" class="grid"/>
+<text x="830.0" y="304.0" class="tick" text-anchor="middle">100</text>
+<line x1="643.1" y1="127.0" x2="716.8" y2="127.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="700.4" cy="127.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>AoP-GAU-Net, IUGC 2024 test, FH, seed 0: 88.4%</title></circle>
+<circle cx="702.0" cy="127.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>AoP-GAU-Net, IUGC 2024 test, FH, seed 1: 88.5%</title></circle>
+<circle cx="637.4" cy="127.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>AoP-GAU-Net, IUGC 2024 test, FH, seed 2: 82.8%</title></circle>
+<circle cx="679.9" cy="127.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>AoP-GAU-Net, IUGC 2024 test, FH: 86.6 ± 3.3%</title></circle>
+<line x1="531.2" y1="141.0" x2="580.3" y2="141.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="584.0" cy="141.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>AoP-GAU-Net, IUGC 2024 test, PS, seed 0: 78.0%</title></circle>
+<circle cx="544.2" cy="141.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>AoP-GAU-Net, IUGC 2024 test, PS, seed 1: 74.4%</title></circle>
+<circle cx="539.1" cy="141.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>AoP-GAU-Net, IUGC 2024 test, PS, seed 2: 73.9%</title></circle>
+<circle cx="555.7" cy="141.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>AoP-GAU-Net, IUGC 2024 test, PS: 75.4 ± 2.2%</title></circle>
+<line x1="676.4" y1="171.0" x2="718.7" y2="171.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="680.7" cy="171.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>U-Net, IUGC 2024 test, FH, seed 0: 86.6%</title></circle>
+<circle cx="721.3" cy="171.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>U-Net, IUGC 2024 test, FH, seed 1: 90.3%</title></circle>
+<circle cx="690.6" cy="171.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>U-Net, IUGC 2024 test, FH, seed 2: 87.5%</title></circle>
+<circle cx="697.6" cy="171.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>U-Net, IUGC 2024 test, FH: 88.1 ± 1.9%</title></circle>
+<line x1="548.9" y1="185.0" x2="583.9" y2="185.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="586.5" cy="185.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>U-Net, IUGC 2024 test, PS, seed 0: 78.2%</title></circle>
+<circle cx="554.8" cy="185.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>U-Net, IUGC 2024 test, PS, seed 1: 75.4%</title></circle>
+<circle cx="557.9" cy="185.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>U-Net, IUGC 2024 test, PS, seed 2: 75.6%</title></circle>
+<circle cx="566.4" cy="185.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>U-Net, IUGC 2024 test, PS: 76.4 ± 1.6%</title></circle>
+<line x1="728.9" y1="215.0" x2="740.0" y2="215.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="735.6" cy="215.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>FAT-Net, IUGC 2024 test, FH, seed 0: 91.5%</title></circle>
+<circle cx="728.5" cy="215.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>FAT-Net, IUGC 2024 test, FH, seed 1: 90.9%</title></circle>
+<circle cx="739.3" cy="215.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>FAT-Net, IUGC 2024 test, FH, seed 2: 91.9%</title></circle>
+<circle cx="734.5" cy="215.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>FAT-Net, IUGC 2024 test, FH: 91.4 ± 0.5%</title></circle>
+<line x1="627.2" y1="229.0" x2="660.2" y2="229.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="654.5" cy="229.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>FAT-Net, IUGC 2024 test, PS, seed 0: 84.3%</title></circle>
+<circle cx="624.7" cy="229.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>FAT-Net, IUGC 2024 test, PS, seed 1: 81.6%</title></circle>
+<circle cx="651.9" cy="229.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>FAT-Net, IUGC 2024 test, PS, seed 2: 84.0%</title></circle>
+<circle cx="643.7" cy="229.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>FAT-Net, IUGC 2024 test, PS: 83.3 ± 1.5%</title></circle>
+<line x1="629.7" y1="259.0" x2="690.6" y2="259.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="625.1" cy="259.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MALUNet, IUGC 2024 test, FH, seed 0: 81.6%</title></circle>
+<circle cx="679.6" cy="259.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MALUNet, IUGC 2024 test, FH, seed 1: 86.5%</title></circle>
+<circle cx="675.8" cy="259.0" r="3.5" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MALUNet, IUGC 2024 test, FH, seed 2: 86.2%</title></circle>
+<circle cx="660.2" cy="259.0" r="5.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>MALUNet, IUGC 2024 test, FH: 84.8 ± 2.7%</title></circle>
+<line x1="507.2" y1="273.0" x2="548.9" y2="273.0" class="" style="stroke: var(--s2); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="551.6" cy="273.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>MALUNet, IUGC 2024 test, PS, seed 0: 75.1%</title></circle>
+<circle cx="511.8" cy="273.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>MALUNet, IUGC 2024 test, PS, seed 1: 71.5%</title></circle>
+<circle cx="520.8" cy="273.0" r="3.5" class="ring" style="fill: var(--s2); fill-opacity: 0.45"><title>MALUNet, IUGC 2024 test, PS, seed 2: 72.3%</title></circle>
+<circle cx="528.1" cy="273.0" r="5.5" class="ring" style="fill: var(--s2); fill-opacity: 1.0"><title>MALUNet, IUGC 2024 test, PS: 73.0 ± 1.9%</title></circle>
+</svg>

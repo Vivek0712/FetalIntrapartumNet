@@ -1,0 +1,7 @@
+{
+ "epoch": 22,
+ "best": 0.8776564431541134,
+ "best_epoch": 12,
+ "bad": 10,
+ "stopped": "patience"
+}

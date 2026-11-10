@@ -1,0 +1,223 @@
+{
+  "model": "resnet152",
+  "display_name": "ResNet-152",
+  "seed": 0,
+  "init": "pretrained",
+  "params": 58147906,
+  "subset": 1.0,
+  "positive_class": "Standard (SPHead)",
+  "primary_threshold": 0.5,
+  "test": {
+    "n": 1251,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        398,
+        174
+      ],
+      [
+        131,
+        548
+      ]
+    ],
+    "accuracy": 0.7561950439648282,
+    "standard": {
+      "precision": 0.7590027700831025,
+      "recall": 0.8070692194403535,
+      "specificity": 0.6958041958041958,
+      "f1": 0.7822983583154889,
+      "support": 679
+    },
+    "non_standard": {
+      "precision": 0.7523629489603024,
+      "recall": 0.6958041958041958,
+      "specificity": 0.8070692194403535,
+      "f1": 0.7229791099000908,
+      "support": 572
+    },
+    "macro_f1": 0.7526387341077898,
+    "auc": 0.8596197616816174
+  },
+  "test_ci": {
+    "method": "video-level cluster bootstrap, percentile",
+    "n_boot": 2000,
+    "seed": 0,
+    "n_clusters": 18,
+    "n_skipped_single_class_auc": 0,
+    "ci95": {
+      "accuracy": [
+        0.6448079517789576,
+        0.8503143763325264
+      ],
+      "macro_f1": [
+        0.6385711196995593,
+        0.8411596652812966
+      ],
+      "auc": [
+        0.7580950106557436,
+        0.9369737834703427
+      ],
+      "sensitivity": [
+        0.6546500110059432,
+        0.9199576911036222
+      ],
+      "specificity": [
+        0.5284730301982118,
+        0.8362509033097268
+      ]
+    }
+  },
+  "test_per_category": {
+    "None": {
+      "n": 243,
+      "correct": 0.8641975308641975
+    },
+    "OnlySP": {
+      "n": 102,
+      "correct": 0.21568627450980393
+    },
+    "OnlyHead": {
+      "n": 227,
+      "correct": 0.7312775330396476
+    },
+    "SPHead": {
+      "n": 679,
+      "correct": 0.8070692194403535
+    }
+  },
+  "youden_val": {
+    "threshold": 0.19472554326057434,
+    "val": {
+      "n": 623,
+      "threshold": 0.19472554326057434,
+      "confusion_matrix": [
+        [
+          164,
+          84
+        ],
+        [
+          37,
+          338
+        ]
+      ],
+      "accuracy": 0.8057784911717496,
+      "standard": {
+        "precision": 0.8009478672985783,
+        "recall": 0.9013333333333333,
+        "specificity": 0.6612903225806451,
+        "f1": 0.848180677540778,
+        "support": 375
+      },
+      "non_standard": {
+        "precision": 0.8159203980099502,
+        "recall": 0.6612903225806451,
+        "specificity": 0.9013333333333333,
+        "f1": 0.7305122494432071,
+        "support": 248
+      },
+      "macro_f1": 0.7893464634919926,
+      "auc": 0.7845806451612902
+    },
+    "test": {
+      "n": 1251,
+      "threshold": 0.19472554326057434,
+      "confusion_matrix": [
+        [
+          295,
+          277
+        ],
+        [
+          66,
+          613
+        ]
+      ],
+      "accuracy": 0.7258193445243805,
+      "standard": {
+        "precision": 0.6887640449438203,
+        "recall": 0.9027982326951399,
+        "specificity": 0.5157342657342657,
+        "f1": 0.781389420012747,
+        "support": 679
+      },
+      "non_standard": {
+        "precision": 0.817174515235457,
+        "recall": 0.5157342657342657,
+        "specificity": 0.9027982326951399,
+        "f1": 0.632368703108253,
+        "support": 572
+      },
+      "macro_f1": 0.7068790615605001,
+      "auc": 0.8596197616816174
+    },
+    "test_ci": {
+      "method": "video-level cluster bootstrap, percentile",
+      "n_boot": 2000,
+      "seed": 0,
+      "n_clusters": 18,
+      "n_skipped_single_class_auc": 0,
+      "ci95": {
+        "accuracy": [
+          0.6042138641015625,
+          0.8293089416613972
+        ],
+        "macro_f1": [
+          0.5952323120085055,
+          0.7924361523089193
+        ],
+        "auc": [
+          0.7580950106557436,
+          0.9369737834703427
+        ],
+        "sensitivity": [
+          0.8166062565308255,
+          0.9628344935761715
+        ],
+        "specificity": [
+          0.38279952398075373,
+          0.6446167512690355
+        ]
+      }
+    }
+  },
+  "val": {
+    "n": 623,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        176,
+        72
+      ],
+      [
+        77,
+        298
+      ]
+    ],
+    "accuracy": 0.7608346709470305,
+    "standard": {
+      "precision": 0.8054054054054054,
+      "recall": 0.7946666666666666,
+      "specificity": 0.7096774193548387,
+      "f1": 0.8,
+      "support": 375
+    },
+    "non_standard": {
+      "precision": 0.6956521739130435,
+      "recall": 0.7096774193548387,
+      "specificity": 0.7946666666666666,
+      "f1": 0.7025948103792415,
+      "support": 248
+    },
+    "macro_f1": 0.7512974051896208,
+    "auc": 0.7845806451612902
+  },
+  "train_summary": {
+    "best_epoch": 3,
+    "best_val_macro_f1": 0.7512974051896208,
+    "epochs_run": 10,
+    "stop_reason": "early_stopping(patience=7)",
+    "wall_s_this_session": 264.5540416240692,
+    "mean_train_epoch_s": 23.92638967037201,
+    "mean_val_s": 1.4613837480545044
+  },
+  "eval_seconds": 20.353459358215332
+}

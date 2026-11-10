@@ -1,0 +1,96 @@
+{
+ "jnu_test": {
+  "primary": {
+   "ref": "aop_ref_challenge_code",
+   "n": 379,
+   "n_fail": 0,
+   "n_used": 379,
+   "mae": 0.0,
+   "rmse": 0.0,
+   "median_ae": 0.0,
+   "bias": 0.0,
+   "sd_diff": 0.0,
+   "loa_low": 0.0,
+   "loa_high": 0.0,
+   "pearson_r": 1.0,
+   "within5": 1.0,
+   "within10": 1.0,
+   "max_ae": 0.0,
+   "mae_ci95": [
+    0.0,
+    0.0
+   ],
+   "ci_unit": "cluster bootstrap over videos"
+  },
+  "secondary": {
+   "ref": "aop_ref",
+   "n": 379,
+   "n_fail": 0,
+   "n_used": 379,
+   "mae": 0.43213537171743865,
+   "rmse": 0.5718084199807412,
+   "median_ae": 0.29719292445246026,
+   "bias": -0.36981870613432827,
+   "sd_diff": 0.4366945908700395,
+   "loa_low": -1.2257401042396057,
+   "loa_high": 0.4861026919709491,
+   "pearson_r": 0.9996069350559517,
+   "within5": 1.0,
+   "within10": 1.0,
+   "max_ae": 1.887109533777334,
+   "mae_ci95": [
+    0.24921622861405293,
+    0.6822345191156243
+   ],
+   "ci_unit": "cluster bootstrap over videos"
+  },
+  "n_frames": 379
+ },
+ "iugc": {
+  "primary": {
+   "ref": "aop_official (IUGC 2024 landmarks)",
+   "n": 300,
+   "n_fail": 0,
+   "n_used": 300,
+   "mae": 3.4659520440240454,
+   "rmse": 4.317855502723143,
+   "median_ae": 3.0515063048230218,
+   "bias": 0.5702533642522015,
+   "sd_diff": 4.287184828704475,
+   "loa_low": -7.832628900008568,
+   "loa_high": 8.97313562851297,
+   "pearson_r": 0.9588488259831432,
+   "within5": 0.74,
+   "within10": 0.9733333333333334,
+   "max_ae": 12.012597384333347,
+   "mae_ci95": [
+    3.1772975961502756,
+    3.7549557171691625
+   ],
+   "ci_unit": "frame bootstrap"
+  },
+  "secondary": {
+   "ref": "aop_mask_challenge_code",
+   "n": 300,
+   "n_fail": 0,
+   "n_used": 300,
+   "mae": 0.16303941905662084,
+   "rmse": 0.20300988894980032,
+   "median_ae": 0.1390614835529007,
+   "bias": 0.07019958849295181,
+   "sd_diff": 0.19080457911574245,
+   "loa_low": -0.30377738657390335,
+   "loa_high": 0.444176563559807,
+   "pearson_r": 0.9999223150360825,
+   "within5": 1.0,
+   "within10": 1.0,
+   "max_ae": 0.5543289652554506,
+   "mae_ci95": [
+    0.14979714733670033,
+    0.17648710615058907
+   ],
+   "ci_unit": "frame bootstrap"
+  },
+  "n_frames": 300
+ }
+}

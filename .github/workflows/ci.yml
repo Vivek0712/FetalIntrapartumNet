@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install (CPU torch)
+        run: |
+          python -m pip install --upgrade pip
+          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.15.0 torchvision==0.29.2
+          pip install -r requirements.txt -r requirements-dev.txt
+          pip install -e . --no-deps
+      - name: Ruff
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Fetch third-party model code at the pinned commits
+        run: fin fetch-third-party
+        env:
+          FIN_WORK: ${{ runner.temp }}/fin
+      - name: README tables and charts match results/
+        run: |
+          fin readme-table --check
+          fin repo-figures --only pipeline charts --out "$RUNNER_TEMP/assets"
+          for f in "$RUNNER_TEMP"/assets/*.svg; do cmp "$f" "docs/assets/$(basename "$f")"; done
+      - name: Tests (no datasets needed)
+        run: pytest -q
+        env:
+          FIN_WORK: ${{ runner.temp }}/fin

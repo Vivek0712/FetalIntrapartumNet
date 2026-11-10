@@ -1,0 +1,17 @@
+{
+ "jnu_sphead": {
+  "n": 3743,
+  "nan_ours": 0,
+  "nan_challenge": 0,
+  "max_abs_diff": 8.526512829121202e-14,
+  "mean_abs_diff": 8.804427487190342e-15,
+  "max_abs_diff_vs_aop_ref_challenge_code": 0.0
+ },
+ "iugc": {
+  "n": 300,
+  "nan_ours": 0,
+  "nan_challenge": 0,
+  "max_abs_diff": 4.263256414560601e-14,
+  "mean_abs_diff": 9.308109838457313e-15
+ }
+}

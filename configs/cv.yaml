@@ -1,0 +1,12 @@
+# Patient-grouped K-fold cross-validation of the classifiers (fin.data.splits cv; fin.evaluation.aggregate cv).
+# Training protocol per fold: configs/classification.yaml with one seed.
+k: 5
+seeds: [0]
+models: [deepfetalnet, psfhspnet, squeezenet11, shufflenetv2, mobilenetv2, mobilenetv3, resnet152]
+fold_search:
+  seed: 42                # test folds: default_rng(seed); validation of fold k: default_rng(seed + 1 + k)
+  draws: 20000
+  val_fraction: 0.10      # validation = about 10% of all frames, from women outside the test fold
+pooled_comparison:
+  n_boot: 2000            # bootstrap over women of the pooled out-of-fold predictions, paired with DeepFetalNet
+  seed: 0

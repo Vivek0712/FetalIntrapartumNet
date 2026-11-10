@@ -1,0 +1,35 @@
+# FH / PS segmentation and AoP: one budget for all four models (fin.training.segmentation,
+# fin.evaluation.segmentation).
+models: [malunet, aopgaunet, unet, fatnet]      # training order (seed-major)
+seeds:                                         # the seeds that were trained and are reported
+  malunet: [0, 1, 2]
+  aopgaunet: [0, 1, 2]
+  unet: [0, 1, 2]
+  fatnet: [0, 1, 2]
+input_size: 256
+epochs: 60                # maximum epochs, also the cosine T_max
+patience: 10              # early stopping on the validation per-image mean foreground Dice (FH and PS)
+batch_size: 8             # drop_last
+val_batch_size: 16
+optimizer:
+  name: AdamW             # the only optimizer implemented (checked at start)
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+scheduler:
+  name: CosineAnnealingLR # the only scheduler implemented (checked); stepped once per epoch
+  eta_min: 0.0
+augmentation:             # train split only (fin.data.datasets.Augmentation); no flips
+  rotation_deg: 10.0      # rotation uniform in [-10, 10] degrees about the image centre
+  scale: [0.9, 1.1]       # isotropic scale, same affine as the rotation
+  shift: 0.04             # translation uniform in [-0.04, 0.04] x image size, per axis
+  contrast: [0.9, 1.1]    # contrast factor about 0.5
+  brightness: 0.1         # brightness offset uniform in [-0.1, 0.1]
+train_set: seg            # seg = SPHead training frames; seg_plus adds OnlySP and OnlyHead frames
+reference_column: aop_ref_challenge_code   # AoP target of the AoP-GAU-Net regression head
+loss:
+  baseline: {dice: 1.0, ce: 1.0}
+  aopgaunet: {dice: 1.0, ce: 1.0, boundary: 0.5, aop: 0.2}
+evaluation:
+  batch_size: 16
+  n_boot: 2000            # cluster bootstrap over videos for the AoP MAE CI
+  bootstrap_seed: 0

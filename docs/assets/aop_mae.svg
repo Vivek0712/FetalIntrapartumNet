@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="724" viewBox="0 0 860 724" role="img" aria-label="AoP mean absolute error of every segmenter on three test sets">
+<title>AoP mean absolute error of every segmenter on three test sets</title>
+<style>
+svg { --surface: #ffffff; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7;
+      --card: #f6f8fa; --line: #d0d7de; --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface: #0d1117; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+        --card: #161b22; --line: #30363d; --s1: #3987e5; --s2: #d95926; --s3: #199e70; }
+}
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--ink2); font-size: 12px; }
+.title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+.sub { fill: var(--ink2); font-size: 12px; }
+.lab { fill: var(--ink); font-size: 12.5px; }
+.val { fill: var(--ink2); font-size: 11.5px; font-variant-numeric: tabular-nums;
+       paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.axis { stroke: var(--axis); stroke-width: 1; }
+.ref { stroke: var(--ink2); stroke-width: 1.5; }
+.floor { stroke: var(--muted); stroke-width: 1.5; }
+.ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+<text x="20.0" y="26.0" class="title" text-anchor="start">Angle of progression</text>
+<text x="20.0" y="46.0" class="sub" text-anchor="start">Mean absolute error (degrees, lower is better) · bar: mean over seeds · whisker: ± SD</text>
+<circle cx="25.0" cy="66.0" r="5" style="fill: var(--s1)"/>
+<text x="35.0" y="70.0" class="lab" text-anchor="start">Geometry on predicted masks</text>
+<circle cx="256.4" cy="66.0" r="5" style="fill: var(--s2)"/>
+<text x="266.4" y="70.0" class="lab" text-anchor="start">Direct regression head</text>
+<text x="20.0" y="104.0" class="lab" text-anchor="start" style="font-weight: 600">JNU-IFM test</text>
+<line x1="160.0" y1="132.0" x2="160.0" y2="262.0" class="grid"/>
+<text x="160.0" y="278.0" class="tick" text-anchor="middle">0°</text>
+<line x1="307.5" y1="132.0" x2="307.5" y2="262.0" class="grid"/>
+<text x="307.5" y="278.0" class="tick" text-anchor="middle">5°</text>
+<line x1="455.0" y1="132.0" x2="455.0" y2="262.0" class="grid"/>
+<text x="455.0" y="278.0" class="tick" text-anchor="middle">10°</text>
+<line x1="602.5" y1="132.0" x2="602.5" y2="262.0" class="grid"/>
+<text x="602.5" y="278.0" class="tick" text-anchor="middle">15°</text>
+<line x1="750.0" y1="132.0" x2="750.0" y2="262.0" class="grid"/>
+<text x="750.0" y="278.0" class="tick" text-anchor="middle">20°</text>
+<line x1="457.5" y1="122.0" x2="457.5" y2="264.0" class="ref"/>
+<text x="462.5" y="120.0" class="val" text-anchor="start">constant prediction 10.08°</text>
+<line x1="160.0" y1="132.0" x2="160.0" y2="262.0" class="axis"/>
+<text x="148.0" y="149.0" class="lab" text-anchor="end">AoP-GAU-Net</text>
+<path d="M160.0,137.0 H366.6 Q370.6,137.0 370.6,141.0 V149.0 Q370.6,153.0 366.6,153.0 H160.0 Z" style="fill: var(--s1)"><title>AoP-GAU-Net, JNU-IFM test: 7.14 ± 0.91°</title></path>
+<line x1="343.7" y1="145.0" x2="397.5" y2="145.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="405.5" y="149.0" class="val" text-anchor="start">7.14 ± 0.91°</text>
+<text x="148.0" y="175.0" class="lab" text-anchor="end">U-Net</text>
+<path d="M160.0,163.0 H343.8 Q347.8,163.0 347.8,167.0 V175.0 Q347.8,179.0 343.8,179.0 H160.0 Z" style="fill: var(--s1)"><title>U-Net, JNU-IFM test: 6.37 ± 0.47°</title></path>
+<line x1="334.1" y1="171.0" x2="361.6" y2="171.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="369.6" y="175.0" class="val" text-anchor="start">6.37 ± 0.47°</text>
+<text x="148.0" y="201.0" class="lab" text-anchor="end">FAT-Net</text>
+<path d="M160.0,189.0 H343.7 Q347.7,189.0 347.7,193.0 V201.0 Q347.7,205.0 343.7,205.0 H160.0 Z" style="fill: var(--s1)"><title>FAT-Net, JNU-IFM test: 6.36 ± 0.23°</title></path>
+<line x1="340.9" y1="197.0" x2="354.6" y2="197.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="362.6" y="201.0" class="val" text-anchor="start">6.36 ± 0.23°</text>
+<text x="148.0" y="227.0" class="lab" text-anchor="end">MALUNet</text>
+<path d="M160.0,215.0 H432.3 Q436.3,215.0 436.3,219.0 V227.0 Q436.3,231.0 432.3,231.0 H160.0 Z" style="fill: var(--s1)"><title>MALUNet, JNU-IFM test: 9.37 ± 1.23°</title></path>
+<line x1="400.1" y1="223.0" x2="472.4" y2="223.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="480.4" y="227.0" class="val" text-anchor="start">9.37 ± 1.23°</text>
+<text x="148.0" y="253.0" class="lab" text-anchor="end">AoP-GAU-Net head</text>
+<path d="M160.0,241.0 H439.4 Q443.4,241.0 443.4,245.0 V253.0 Q443.4,257.0 439.4,257.0 H160.0 Z" style="fill: var(--s2)"><title>AoP-GAU-Net head, JNU-IFM test: 9.61 ± 1.87°</title></path>
+<line x1="388.3" y1="249.0" x2="498.5" y2="249.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="506.5" y="253.0" class="val" text-anchor="start">9.61 ± 1.87°</text>
+<text x="20.0" y="316.0" class="lab" text-anchor="start" style="font-weight: 600">IUGC 2024 test</text>
+<line x1="160.0" y1="344.0" x2="160.0" y2="474.0" class="grid"/>
+<text x="160.0" y="490.0" class="tick" text-anchor="middle">0°</text>
+<line x1="307.5" y1="344.0" x2="307.5" y2="474.0" class="grid"/>
+<text x="307.5" y="490.0" class="tick" text-anchor="middle">5°</text>
+<line x1="455.0" y1="344.0" x2="455.0" y2="474.0" class="grid"/>
+<text x="455.0" y="490.0" class="tick" text-anchor="middle">10°</text>
+<line x1="602.5" y1="344.0" x2="602.5" y2="474.0" class="grid"/>
+<text x="602.5" y="490.0" class="tick" text-anchor="middle">15°</text>
+<line x1="750.0" y1="344.0" x2="750.0" y2="474.0" class="grid"/>
+<text x="750.0" y="490.0" class="tick" text-anchor="middle">20°</text>
+<line x1="538.5" y1="334.0" x2="538.5" y2="476.0" class="ref"/>
+<text x="543.5" y="332.0" class="val" text-anchor="start">constant prediction 12.83°</text>
+<line x1="262.2" y1="334.0" x2="262.2" y2="476.0" class="floor" style="stroke-dasharray: 4 3"/>
+<text x="257.2" y="332.0" class="val" text-anchor="end">ground-truth masks 3.47°</text>
+<line x1="160.0" y1="344.0" x2="160.0" y2="474.0" class="axis"/>
+<text x="148.0" y="361.0" class="lab" text-anchor="end">AoP-GAU-Net</text>
+<path d="M160.0,349.0 H573.4 Q577.4,349.0 577.4,353.0 V361.0 Q577.4,365.0 573.4,365.0 H160.0 Z" style="fill: var(--s1)"><title>AoP-GAU-Net, IUGC 2024 test: 14.15 ± 1.29°</title></path>
+<line x1="539.3" y1="357.0" x2="615.4" y2="357.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="623.4" y="361.0" class="val" text-anchor="start">14.15 ± 1.29°</text>
+<text x="148.0" y="387.0" class="lab" text-anchor="end">U-Net</text>
+<path d="M160.0,375.0 H462.0 Q466.0,375.0 466.0,379.0 V387.0 Q466.0,391.0 462.0,391.0 H160.0 Z" style="fill: var(--s1)"><title>U-Net, IUGC 2024 test: 10.37 ± 1.01°</title></path>
+<line x1="436.1" y1="383.0" x2="495.9" y2="383.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="503.9" y="387.0" class="val" text-anchor="start">10.37 ± 1.01°</text>
+<text x="148.0" y="413.0" class="lab" text-anchor="end">FAT-Net</text>
+<path d="M160.0,401.0 H408.2 Q412.2,401.0 412.2,405.0 V413.0 Q412.2,417.0 408.2,417.0 H160.0 Z" style="fill: var(--s1)"><title>FAT-Net, IUGC 2024 test: 8.55 ± 1.15°</title></path>
+<line x1="378.2" y1="409.0" x2="446.2" y2="409.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="454.2" y="413.0" class="val" text-anchor="start">8.55 ± 1.15°</text>
+<text x="148.0" y="439.0" class="lab" text-anchor="end">MALUNet</text>
+<path d="M160.0,427.0 H582.9 Q586.9,427.0 586.9,431.0 V439.0 Q586.9,443.0 582.9,443.0 H160.0 Z" style="fill: var(--s1)"><title>MALUNet, IUGC 2024 test: 14.47 ± 0.62°</title></path>
+<line x1="568.6" y1="435.0" x2="605.1" y2="435.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="613.1" y="439.0" class="val" text-anchor="start">14.47 ± 0.62°</text>
+<text x="148.0" y="465.0" class="lab" text-anchor="end">AoP-GAU-Net head</text>
+<path d="M160.0,453.0 H505.2 Q509.2,453.0 509.2,457.0 V465.0 Q509.2,469.0 505.2,469.0 H160.0 Z" style="fill: var(--s2)"><title>AoP-GAU-Net head, IUGC 2024 test: 11.84 ± 0.89°</title></path>
+<line x1="483.0" y1="461.0" x2="535.5" y2="461.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="543.5" y="465.0" class="val" text-anchor="start">11.84 ± 0.89°</text>
+<text x="20.0" y="528.0" class="lab" text-anchor="start" style="font-weight: 600">IUGC 2025, unseen frames (225 frames)</text>
+<line x1="160.0" y1="556.0" x2="160.0" y2="686.0" class="grid"/>
+<text x="160.0" y="702.0" class="tick" text-anchor="middle">0°</text>
+<line x1="307.5" y1="556.0" x2="307.5" y2="686.0" class="grid"/>
+<text x="307.5" y="702.0" class="tick" text-anchor="middle">5°</text>
+<line x1="455.0" y1="556.0" x2="455.0" y2="686.0" class="grid"/>
+<text x="455.0" y="702.0" class="tick" text-anchor="middle">10°</text>
+<line x1="602.5" y1="556.0" x2="602.5" y2="686.0" class="grid"/>
+<text x="602.5" y="702.0" class="tick" text-anchor="middle">15°</text>
+<line x1="750.0" y1="556.0" x2="750.0" y2="686.0" class="grid"/>
+<text x="750.0" y="702.0" class="tick" text-anchor="middle">20°</text>
+<line x1="544.8" y1="546.0" x2="544.8" y2="688.0" class="ref"/>
+<text x="549.8" y="544.0" class="val" text-anchor="start">constant prediction 13.05°</text>
+<line x1="261.6" y1="546.0" x2="261.6" y2="688.0" class="floor" style="stroke-dasharray: 4 3"/>
+<text x="256.6" y="544.0" class="val" text-anchor="end">ground-truth masks 3.44°</text>
+<line x1="160.0" y1="556.0" x2="160.0" y2="686.0" class="axis"/>
+<text x="148.0" y="573.0" class="lab" text-anchor="end">AoP-GAU-Net</text>
+<path d="M160.0,561.0 H605.6 Q609.6,561.0 609.6,565.0 V573.0 Q609.6,577.0 605.6,577.0 H160.0 Z" style="fill: var(--s1)"><title>AoP-GAU-Net, IUGC 2025, unseen frames (225 frames): 15.24 ± 0.71°</title></path>
+<line x1="588.8" y1="569.0" x2="630.4" y2="569.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="638.4" y="573.0" class="val" text-anchor="start">15.24 ± 0.71°</text>
+<text x="148.0" y="599.0" class="lab" text-anchor="end">U-Net</text>
+<path d="M160.0,587.0 H482.3 Q486.3,587.0 486.3,591.0 V599.0 Q486.3,603.0 482.3,603.0 H160.0 Z" style="fill: var(--s1)"><title>U-Net, IUGC 2025, unseen frames (225 frames): 11.06 ± 0.92°</title></path>
+<line x1="459.1" y1="595.0" x2="513.4" y2="595.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="521.4" y="599.0" class="val" text-anchor="start">11.06 ± 0.92°</text>
+<text x="148.0" y="625.0" class="lab" text-anchor="end">FAT-Net</text>
+<path d="M160.0,613.0 H435.9 Q439.9,613.0 439.9,617.0 V625.0 Q439.9,629.0 435.9,629.0 H160.0 Z" style="fill: var(--s1)"><title>FAT-Net, IUGC 2025, unseen frames (225 frames): 9.49 ± 1.13°</title></path>
+<line x1="406.5" y1="621.0" x2="473.3" y2="621.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="481.3" y="625.0" class="val" text-anchor="start">9.49 ± 1.13°</text>
+<text x="148.0" y="651.0" class="lab" text-anchor="end">MALUNet</text>
+<path d="M160.0,639.0 H619.1 Q623.1,639.0 623.1,643.0 V651.0 Q623.1,655.0 619.1,655.0 H160.0 Z" style="fill: var(--s1)"><title>MALUNet, IUGC 2025, unseen frames (225 frames): 15.70 ± 0.83°</title></path>
+<line x1="598.7" y1="647.0" x2="647.5" y2="647.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="655.5" y="651.0" class="val" text-anchor="start">15.70 ± 0.83°</text>
+<text x="148.0" y="677.0" class="lab" text-anchor="end">AoP-GAU-Net head</text>
+<path d="M160.0,665.0 H520.3 Q524.3,665.0 524.3,669.0 V677.0 Q524.3,681.0 520.3,681.0 H160.0 Z" style="fill: var(--s2)"><title>AoP-GAU-Net head, IUGC 2025, unseen frames (225 frames): 12.35 ± 0.45°</title></path>
+<line x1="511.1" y1="673.0" x2="537.5" y2="673.0" class="" style="stroke: var(--ink2); stroke-width: 1.5"/>
+<text x="545.5" y="677.0" class="val" text-anchor="start">12.35 ± 0.45°</text>
+</svg>

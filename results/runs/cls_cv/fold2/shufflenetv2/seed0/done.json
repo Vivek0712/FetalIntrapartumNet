@@ -1,0 +1,9 @@
+{
+  "best_epoch": 1,
+  "best_val_macro_f1": 0.7757245914650566,
+  "epochs_run": 8,
+  "stop_reason": "early_stopping(patience=7)",
+  "wall_s_this_session": 444.7715570926666,
+  "mean_train_epoch_s": 50.42444226145744,
+  "mean_val_s": 4.998016268014908
+}

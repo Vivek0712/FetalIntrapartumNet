@@ -1,0 +1,17 @@
+{
+ "problems": [],
+ "n": 300,
+ "sizes": "{(512, 512): 300}",
+ "labelled_frame_is_SP": 300,
+ "has_both": 300,
+ "preextracted_identical": 300,
+ "preextracted_mae_max": 0.0,
+ "aop_official_mean": 97.72728849417345,
+ "aop_official_sd": 14.760941364027959,
+ "aop_mask_vs_official_absdiff_mean": 3.4549301500327867,
+ "aop_mask_vs_official_absdiff_median": 2.98436774820248,
+ "aop_mask_vs_official_absdiff_p95": 8.51439757705402,
+ "aop_mask_nan": 0,
+ "ps_pixel_fraction": 0.024201253255208333,
+ "mask_label_map": "source 0 bg, 127 PS, 255 FH (PS landmarks fall on 127 in 300/300 frames) -> 0 bg, 1 FH, 2 PS"
+}

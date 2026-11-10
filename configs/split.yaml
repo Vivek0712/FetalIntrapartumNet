@@ -1,0 +1,5 @@
+# Locked patient-disjoint split of JNU-IFM (fin.data.jnu build; algorithm in fin.data.splits).
+# The committed result is splits/frames.csv (column split) and splits/split_videos.json.
+seed: 42              # np.random.default_rng(seed)
+draws: 20000          # random permutations of the 51 women; the lowest-cost draw is kept
+fractions: [0.8, 0.1, 0.1]   # target share of frames: train, val, test

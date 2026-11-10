@@ -1,0 +1,17 @@
+# Corruption benchmark of the classifiers on the JNU-IFM test split (fin.robustness).
+# Corruptions act on the 224 x 224 input in [0, 1] before normalisation; noise for (condition, frame) is drawn
+# from np.random.default_rng([base_seed, condition index, crc32(frame_id)]).
+base_seed: 20261107
+threshold: 0.5
+batch_size: 64
+conditions:               # id, kind, parameter, table label
+  - [clean, none, null, None]
+  - [speckle-0.05, speckle, 0.05, Variance 0.05]
+  - [speckle-0.10, speckle, 0.10, Variance 0.10]
+  - [speckle-0.20, speckle, 0.20, Variance 0.20]
+  - [blur-5, motion, 5, Kernel 5]
+  - [blur-9, motion, 9, Kernel 9]
+  - [blur-15, motion, 15, Kernel 15]
+  - [gauss-0.01, gaussian, 0.01, Variance 0.01]
+  - [gauss-0.05, gaussian, 0.05, Variance 0.05]
+  - [gauss-0.10, gaussian, 0.10, Variance 0.10]

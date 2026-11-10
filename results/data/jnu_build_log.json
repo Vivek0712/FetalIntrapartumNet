@@ -1,0 +1,54 @@
+{
+ "problems": [
+  "category 3 vs mask (fh=False,ps=True) 20190909T161601_69",
+  "category 3 vs mask (fh=False,ps=True) 20190909T161601_79",
+  "category 4 vs mask (fh=True,ps=True) 20191115T112747_169"
+ ],
+ "n_frames": 6224,
+ "counts": {
+  "None": 1022,
+  "OnlySP": 323,
+  "OnlyHead": 1136,
+  "SPHead": 3743
+ },
+ "split_frames": {
+  "train": 4958,
+  "val": 636,
+  "test": 630
+ },
+ "split_videos": {
+  "train": 61,
+  "val": 9,
+  "test": 8
+ },
+ "split_patients": {
+  "train": 38,
+  "val": 6,
+  "test": 7
+ },
+ "split_by_category": {
+  "None": {
+   "test": 98,
+   "train": 818,
+   "val": 106
+  },
+  "OnlyHead": {
+   "test": 115,
+   "train": 908,
+   "val": 113
+  },
+  "OnlySP": {
+   "test": 38,
+   "train": 238,
+   "val": 47
+  },
+  "SPHead": {
+   "test": 379,
+   "train": 2994,
+   "val": 370
+  }
+ },
+ "image_shapes": {
+  "(1026, 1295, 1)": 6224
+ }
+}

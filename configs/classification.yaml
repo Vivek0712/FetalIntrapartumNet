@@ -1,0 +1,30 @@
+# Standard vs Non-Standard plane classification: one protocol for all seven models
+# (fin.training.classification, fin.evaluation.classification).
+models: [deepfetalnet, psfhspnet, squeezenet11, shufflenetv2, mobilenetv2, mobilenetv3, resnet152]
+seeds: [0, 1, 2]          # seed = initialisation of new layers, batch order and augmentation stream
+init: default             # deepfetalnet: scratch; every baseline: ImageNet (see fin.models)
+input_size: 224           # grayscale -> 3 channels, ImageNet mean/std
+epochs: 30                # maximum epochs, also the cosine T_max
+patience: 7               # early stopping on validation macro-F1, every model
+batch_size: 32
+val_batch_size: 64
+optimizer:
+  name: AdamW             # the only optimizer implemented (checked at start)
+  lr: 1.0e-4
+  weight_decay: 1.0e-2
+scheduler:
+  name: CosineAnnealingLR # the only scheduler implemented (checked); stepped once per epoch
+  eta_min: 1.0e-6
+loss: CrossEntropyLoss    # unweighted; the only loss implemented (checked)
+augmentation:             # train split only (fin.data.datasets.Augmentation); no flips
+  rotation_deg: 10.0      # rotation uniform in [-10, 10] degrees about the image centre
+  scale: [0.9, 1.1]       # isotropic scale, same affine as the rotation
+  shift: 0.04             # translation uniform in [-0.04, 0.04] x image size, per axis
+  contrast: [0.9, 1.1]    # contrast factor about 0.5
+  brightness: 0.1         # brightness offset uniform in [-0.1, 0.1]
+selection_threshold: 0.5  # best checkpoint = highest validation macro-F1 at this threshold (strict improvement)
+evaluation:
+  threshold: 0.5          # primary operating point; the secondary is Youden's J on validation
+  batch_size: 64
+  n_boot: 2000            # video-level cluster bootstrap resamples
+  bootstrap_seed: 0

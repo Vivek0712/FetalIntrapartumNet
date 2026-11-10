@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fetalintrapartumnet"
+version = "1.0.0"
+description = "Official code of the paper 'FetalIntrapartumNet: a controlled evaluation of standard-plane selection, segmentation and angle-of-progression measurement in intrapartum transperineal ultrasound'"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "B Lakshmanan" },
+    { name = "Vivek Raja P S" },
+    { name = "J Aron Yuvaraj" },
+    { name = "M P Nitharsan" },
+]
+keywords = ["intrapartum ultrasound", "angle of progression", "segmentation", "standard plane", "deep learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "scikit-learn>=1.3",
+    "opencv-python-headless>=4.8",
+    "torch>=2.2",
+    "torchvision>=0.17",
+    "timm>=1.0",
+    "matplotlib>=3.8",
+    "PyYAML>=6.0",
+    "SimpleITK>=2.3",
+]
+
+[project.optional-dependencies]
+efficiency = ["thop>=0.1", "fvcore>=0.1.5"]
+dev = ["pytest==9.2.0", "ruff==0.15.12", "pre-commit==4.6.2"]
+
+[project.scripts]
+fin = "fin.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Vivek0712/FetalIntrapartumNet"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM", "D1", "ANN", "RUF100"]
+ignore = [
+    "D102",    # methods (forward, __getitem__, ...) are described by their class docstring
+    "D105",
+    "D107",
+    "ANN401",  # Any is used for JSON-like values
+    "SIM108",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "ANN"]
+# generated LaTeX text: captions are single string literals whose line breaks would change the output
+"src/fin/reporting/tables.py" = ["E501"]
+"src/fin/reporting/supp_tables.py" = ["E501"]
+"src/fin/reporting/describe_keys.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["fin"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

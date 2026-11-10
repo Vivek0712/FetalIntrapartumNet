@@ -1,0 +1,954 @@
+{
+  "deepfetalnet": {
+    "display_name": "DeepFetalNet",
+    "init": "scratch",
+    "params": 659433,
+    "seeds": [
+      0
+    ],
+    "n_test": 1244,
+    "accuracy": {
+      "mean": 0.7837620578778135,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7837620578778135
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.7629007173855283,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7629007173855283
+      ]
+    },
+    "auc": {
+      "mean": 0.861677802283342,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.861677802283342
+      ]
+    },
+    "sensitivity_standard": {
+      "mean": 0.8936170212765957,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8936170212765957
+      ]
+    },
+    "specificity_standard": {
+      "mean": 0.6158536585365854,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6158536585365854
+      ]
+    },
+    "precision_standard": {
+      "mean": 0.7804878048780488,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7804878048780488
+      ]
+    },
+    "precision_non_standard": {
+      "mean": 0.7911227154046997,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7911227154046997
+      ]
+    },
+    "auc_ci95_per_seed": [
+      [
+        0.7820210537558241,
+        0.9369111543259276
+      ]
+    ],
+    "n_boot": 2000,
+    "n_test_videos": 19,
+    "youden": {
+      "thresholds": [
+        0.43561074137687683
+      ],
+      "accuracy": {
+        "mean": 0.7813504823151125,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7813504823151125
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7575180803705794,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7575180803705794
+        ]
+      },
+      "sensitivity_standard": {
+        "mean": 0.9055851063829787,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.9055851063829787
+        ]
+      },
+      "specificity_standard": {
+        "mean": 0.5914634146341463,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.5914634146341463
+        ]
+      }
+    },
+    "val_macro_f1_best": {
+      "mean": 0.5744260377984365,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.5744260377984365
+      ]
+    },
+    "best_epoch": [
+      16
+    ],
+    "epochs_run": [
+      23
+    ],
+    "confusion_matrices": [
+      [
+        [
+          303,
+          189
+        ],
+        [
+          80,
+          672
+        ]
+      ]
+    ]
+  },
+  "psfhspnet": {
+    "display_name": "PSFHSP-Net",
+    "init": "pretrained",
+    "params": 387906,
+    "seeds": [
+      0
+    ],
+    "n_test": 1244,
+    "accuracy": {
+      "mean": 0.7733118971061094,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7733118971061094
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.7640865623865181,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7640865623865181
+      ]
+    },
+    "auc": {
+      "mean": 0.8632400320013838,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8632400320013838
+      ]
+    },
+    "sensitivity_standard": {
+      "mean": 0.8031914893617021,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8031914893617021
+      ]
+    },
+    "specificity_standard": {
+      "mean": 0.7276422764227642,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7276422764227642
+      ]
+    },
+    "precision_standard": {
+      "mean": 0.8184281842818428,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8184281842818428
+      ]
+    },
+    "precision_non_standard": {
+      "mean": 0.7075098814229249,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7075098814229249
+      ]
+    },
+    "auc_ci95_per_seed": [
+      [
+        0.7696770760931594,
+        0.9361379814744875
+      ]
+    ],
+    "n_boot": 2000,
+    "n_test_videos": 19,
+    "youden": {
+      "thresholds": [
+        0.3247643709182739
+      ],
+      "accuracy": {
+        "mean": 0.7717041800643086,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7717041800643086
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7362675425500149,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7362675425500149
+        ]
+      },
+      "sensitivity_standard": {
+        "mean": 0.9414893617021277,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.9414893617021277
+        ]
+      },
+      "specificity_standard": {
+        "mean": 0.5121951219512195,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.5121951219512195
+        ]
+      }
+    },
+    "val_macro_f1_best": {
+      "mean": 0.7110572362179826,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7110572362179826
+      ]
+    },
+    "best_epoch": [
+      6
+    ],
+    "epochs_run": [
+      13
+    ],
+    "confusion_matrices": [
+      [
+        [
+          358,
+          134
+        ],
+        [
+          148,
+          604
+        ]
+      ]
+    ]
+  },
+  "resnet152": {
+    "display_name": "ResNet-152",
+    "init": "pretrained",
+    "params": 58147906,
+    "seeds": [
+      0
+    ],
+    "n_test": 1244,
+    "accuracy": {
+      "mean": 0.752411575562701,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.752411575562701
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.7436486208013189,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7436486208013189
+      ]
+    },
+    "auc": {
+      "mean": 0.8481799212938939,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8481799212938939
+      ]
+    },
+    "sensitivity_standard": {
+      "mean": 0.7752659574468085,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7752659574468085
+      ]
+    },
+    "specificity_standard": {
+      "mean": 0.717479674796748,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.717479674796748
+      ]
+    },
+    "precision_standard": {
+      "mean": 0.8074792243767313,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8074792243767313
+      ]
+    },
+    "precision_non_standard": {
+      "mean": 0.6762452107279694,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6762452107279694
+      ]
+    },
+    "auc_ci95_per_seed": [
+      [
+        0.7326577124276726,
+        0.9517138379991535
+      ]
+    ],
+    "n_boot": 2000,
+    "n_test_videos": 19,
+    "youden": {
+      "thresholds": [
+        0.08436525613069534
+      ],
+      "accuracy": {
+        "mean": 0.7676848874598071,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7676848874598071
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7511130187366519,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7511130187366519
+        ]
+      },
+      "sensitivity_standard": {
+        "mean": 0.848404255319149,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.848404255319149
+        ]
+      },
+      "specificity_standard": {
+        "mean": 0.6443089430894309,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.6443089430894309
+        ]
+      }
+    },
+    "val_macro_f1_best": {
+      "mean": 0.7729493037423847,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7729493037423847
+      ]
+    },
+    "best_epoch": [
+      9
+    ],
+    "epochs_run": [
+      16
+    ],
+    "confusion_matrices": [
+      [
+        [
+          353,
+          139
+        ],
+        [
+          169,
+          583
+        ]
+      ]
+    ]
+  },
+  "squeezenet11": {
+    "display_name": "SqueezeNet 1.1",
+    "init": "pretrained",
+    "params": 723522,
+    "seeds": [
+      0
+    ],
+    "n_test": 1244,
+    "accuracy": {
+      "mean": 0.6977491961414791,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6977491961414791
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.6816196730595399,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6816196730595399
+      ]
+    },
+    "auc": {
+      "mean": 0.7848961036152915,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7848961036152915
+      ]
+    },
+    "sensitivity_standard": {
+      "mean": 0.7632978723404256,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7632978723404256
+      ]
+    },
+    "specificity_standard": {
+      "mean": 0.5975609756097561,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.5975609756097561
+      ]
+    },
+    "precision_standard": {
+      "mean": 0.7435233160621761,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7435233160621761
+      ]
+    },
+    "precision_non_standard": {
+      "mean": 0.6228813559322034,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6228813559322034
+      ]
+    },
+    "auc_ci95_per_seed": [
+      [
+        0.6502655616810624,
+        0.9051893155300637
+      ]
+    ],
+    "n_boot": 2000,
+    "n_test_videos": 19,
+    "youden": {
+      "thresholds": [
+        0.5731071829795837
+      ],
+      "accuracy": {
+        "mean": 0.6913183279742765,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.6913183279742765
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.6789677419354838,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.6789677419354838
+        ]
+      },
+      "sensitivity_standard": {
+        "mean": 0.7340425531914894,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7340425531914894
+        ]
+      },
+      "specificity_standard": {
+        "mean": 0.6260162601626016,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.6260162601626016
+        ]
+      }
+    },
+    "val_macro_f1_best": {
+      "mean": 0.8264331956891724,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8264331956891724
+      ]
+    },
+    "best_epoch": [
+      7
+    ],
+    "epochs_run": [
+      14
+    ],
+    "confusion_matrices": [
+      [
+        [
+          294,
+          198
+        ],
+        [
+          178,
+          574
+        ]
+      ]
+    ]
+  },
+  "shufflenetv2": {
+    "display_name": "ShuffleNetV2",
+    "init": "pretrained",
+    "params": 1255654,
+    "seeds": [
+      0
+    ],
+    "n_test": 1244,
+    "accuracy": {
+      "mean": 0.770096463022508,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.770096463022508
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.7480483134482251,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7480483134482251
+      ]
+    },
+    "auc": {
+      "mean": 0.7861799429164505,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7861799429164505
+      ]
+    },
+    "sensitivity_standard": {
+      "mean": 0.8816489361702128,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8816489361702128
+      ]
+    },
+    "specificity_standard": {
+      "mean": 0.5995934959349594,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.5995934959349594
+      ]
+    },
+    "precision_standard": {
+      "mean": 0.7709302325581395,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7709302325581395
+      ]
+    },
+    "precision_non_standard": {
+      "mean": 0.7682291666666666,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7682291666666666
+      ]
+    },
+    "auc_ci95_per_seed": [
+      [
+        0.6505276713792382,
+        0.9191177859584946
+      ]
+    ],
+    "n_boot": 2000,
+    "n_test_videos": 19,
+    "youden": {
+      "thresholds": [
+        0.41082558035850525
+      ],
+      "accuracy": {
+        "mean": 0.7765273311897106,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7765273311897106
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7524452538024555,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7524452538024555
+        ]
+      },
+      "sensitivity_standard": {
+        "mean": 0.9002659574468085,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.9002659574468085
+        ]
+      },
+      "specificity_standard": {
+        "mean": 0.5873983739837398,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.5873983739837398
+        ]
+      }
+    },
+    "val_macro_f1_best": {
+      "mean": 0.7314995563442768,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7314995563442768
+      ]
+    },
+    "best_epoch": [
+      6
+    ],
+    "epochs_run": [
+      13
+    ],
+    "confusion_matrices": [
+      [
+        [
+          295,
+          197
+        ],
+        [
+          89,
+          663
+        ]
+      ]
+    ]
+  },
+  "mobilenetv2": {
+    "display_name": "MobileNetV2",
+    "init": "pretrained",
+    "params": 2226434,
+    "seeds": [
+      0
+    ],
+    "n_test": 1244,
+    "accuracy": {
+      "mean": 0.7290996784565916,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7290996784565916
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.7117739226447926,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7117739226447926
+      ]
+    },
+    "auc": {
+      "mean": 0.7854123421553364,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7854123421553364
+      ]
+    },
+    "sensitivity_standard": {
+      "mean": 0.8058510638297872,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8058510638297872
+      ]
+    },
+    "specificity_standard": {
+      "mean": 0.6117886178861789,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6117886178861789
+      ]
+    },
+    "precision_standard": {
+      "mean": 0.7603513174404015,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7603513174404015
+      ]
+    },
+    "precision_non_standard": {
+      "mean": 0.6733780760626398,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6733780760626398
+      ]
+    },
+    "auc_ci95_per_seed": [
+      [
+        0.6519129381361723,
+        0.9199458167965047
+      ]
+    ],
+    "n_boot": 2000,
+    "n_test_videos": 19,
+    "youden": {
+      "thresholds": [
+        0.6197738647460938
+      ],
+      "accuracy": {
+        "mean": 0.7186495176848875,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7186495176848875
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7053808260704812,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7053808260704812
+        ]
+      },
+      "sensitivity_standard": {
+        "mean": 0.7699468085106383,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7699468085106383
+        ]
+      },
+      "specificity_standard": {
+        "mean": 0.6402439024390244,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.6402439024390244
+        ]
+      }
+    },
+    "val_macro_f1_best": {
+      "mean": 0.800642181008618,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.800642181008618
+      ]
+    },
+    "best_epoch": [
+      1
+    ],
+    "epochs_run": [
+      8
+    ],
+    "confusion_matrices": [
+      [
+        [
+          301,
+          191
+        ],
+        [
+          146,
+          606
+        ]
+      ]
+    ]
+  },
+  "mobilenetv3": {
+    "display_name": "MobileNetV3",
+    "init": "pretrained",
+    "params": 4204594,
+    "seeds": [
+      0
+    ],
+    "n_test": 1244,
+    "accuracy": {
+      "mean": 0.7692926045016077,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7692926045016077
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.7495831974385141,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7495831974385141
+      ]
+    },
+    "auc": {
+      "mean": 0.8164271968517558,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8164271968517558
+      ]
+    },
+    "sensitivity_standard": {
+      "mean": 0.8683510638297872,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.8683510638297872
+      ]
+    },
+    "specificity_standard": {
+      "mean": 0.6178861788617886,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.6178861788617886
+      ]
+    },
+    "precision_standard": {
+      "mean": 0.7764565992865636,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7764565992865636
+      ]
+    },
+    "precision_non_standard": {
+      "mean": 0.7543424317617866,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7543424317617866
+      ]
+    },
+    "auc_ci95_per_seed": [
+      [
+        0.6923807728950963,
+        0.9333580922049022
+      ]
+    ],
+    "n_boot": 2000,
+    "n_test_videos": 19,
+    "youden": {
+      "thresholds": [
+        0.6652598977088928
+      ],
+      "accuracy": {
+        "mean": 0.7668810289389068,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7668810289389068
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7518673911548249,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.7518673911548249
+        ]
+      },
+      "sensitivity_standard": {
+        "mean": 0.8377659574468085,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.8377659574468085
+        ]
+      },
+      "specificity_standard": {
+        "mean": 0.6585365853658537,
+        "sd": NaN,
+        "n": 1,
+        "values": [
+          0.6585365853658537
+        ]
+      }
+    },
+    "val_macro_f1_best": {
+      "mean": 0.7430841933973831,
+      "sd": NaN,
+      "n": 1,
+      "values": [
+        0.7430841933973831
+      ]
+    },
+    "best_epoch": [
+      6
+    ],
+    "epochs_run": [
+      13
+    ],
+    "confusion_matrices": [
+      [
+        [
+          304,
+          188
+        ],
+        [
+          99,
+          653
+        ]
+      ]
+    ]
+  }
+}

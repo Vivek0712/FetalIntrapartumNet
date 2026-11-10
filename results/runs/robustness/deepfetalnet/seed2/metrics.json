@@ -1,0 +1,328 @@
+{
+ "model": "deepfetalnet",
+ "display_name": "DeepFetalNet",
+ "seed": 2,
+ "init": "scratch",
+ "run": "$FIN_WORK/runs/cls/deepfetalnet/seed2",
+ "n_frames": 630,
+ "limit": 0,
+ "threshold": 0.5,
+ "conditions": {
+  "clean": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     129,
+     122
+    ],
+    [
+     74,
+     305
+    ]
+   ],
+   "accuracy": 0.6888888888888889,
+   "standard": {
+    "precision": 0.7142857142857143,
+    "recall": 0.8047493403693932,
+    "specificity": 0.5139442231075697,
+    "f1": 0.7568238213399504,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": 0.6354679802955665,
+    "recall": 0.5139442231075697,
+    "specificity": 0.8047493403693932,
+    "f1": 0.5682819383259912,
+    "support": 251
+   },
+   "macro_f1": 0.6625528798329707,
+   "auc": 0.7545333179156724
+  },
+  "speckle-0.05": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     9,
+     242
+    ],
+    [
+     2,
+     377
+    ]
+   ],
+   "accuracy": 0.6126984126984127,
+   "standard": {
+    "precision": 0.6090468497576736,
+    "recall": 0.9947229551451188,
+    "specificity": 0.035856573705179286,
+    "f1": 0.7555110220440882,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": 0.8181818181818182,
+    "recall": 0.035856573705179286,
+    "specificity": 0.9947229551451188,
+    "f1": 0.06870229007633588,
+    "support": 251
+   },
+   "macro_f1": 0.412106656060212,
+   "auc": 0.5988237025512725
+  },
+  "speckle-0.10": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     3,
+     248
+    ],
+    [
+     0,
+     379
+    ]
+   ],
+   "accuracy": 0.6063492063492063,
+   "standard": {
+    "precision": 0.6044657097288676,
+    "recall": 1.0,
+    "specificity": 0.01195219123505976,
+    "f1": 0.7534791252485089,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": 1.0,
+    "recall": 0.01195219123505976,
+    "specificity": 1.0,
+    "f1": 0.023622047244094488,
+    "support": 251
+   },
+   "macro_f1": 0.3885505862463017,
+   "auc": 0.49505408445374177
+  },
+  "speckle-0.20": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     3,
+     248
+    ],
+    [
+     0,
+     379
+    ]
+   ],
+   "accuracy": 0.6063492063492063,
+   "standard": {
+    "precision": 0.6044657097288676,
+    "recall": 1.0,
+    "specificity": 0.01195219123505976,
+    "f1": 0.7534791252485089,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": 1.0,
+    "recall": 0.01195219123505976,
+    "specificity": 1.0,
+    "f1": 0.023622047244094488,
+    "support": 251
+   },
+   "macro_f1": 0.3885505862463017,
+   "auc": 0.39742349861766657
+  },
+  "blur-5": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     241,
+     10
+    ],
+    [
+     226,
+     153
+    ]
+   ],
+   "accuracy": 0.6253968253968254,
+   "standard": {
+    "precision": 0.9386503067484663,
+    "recall": 0.40369393139841686,
+    "specificity": 0.9601593625498008,
+    "f1": 0.5645756457564576,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": 0.5160599571734475,
+    "recall": 0.9601593625498008,
+    "specificity": 0.40369393139841686,
+    "f1": 0.6713091922005571,
+    "support": 251
+   },
+   "macro_f1": 0.6179424189785073,
+   "auc": 0.7959087134312355
+  },
+  "blur-9": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     249,
+     2
+    ],
+    [
+     281,
+     98
+    ]
+   ],
+   "accuracy": 0.5507936507936508,
+   "standard": {
+    "precision": 0.98,
+    "recall": 0.25857519788918204,
+    "specificity": 0.9920318725099602,
+    "f1": 0.4091858037578288,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": 0.469811320754717,
+    "recall": 0.9920318725099602,
+    "specificity": 0.25857519788918204,
+    "f1": 0.6376440460947503,
+    "support": 251
+   },
+   "macro_f1": 0.5234149249262896,
+   "auc": 0.8374102534453215
+  },
+  "blur-15": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     251,
+     0
+    ],
+    [
+     365,
+     14
+    ]
+   ],
+   "accuracy": 0.42063492063492064,
+   "standard": {
+    "precision": 1.0,
+    "recall": 0.036939313984168866,
+    "specificity": 1.0,
+    "f1": 0.07124681933842239,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": 0.4074675324675325,
+    "recall": 1.0,
+    "specificity": 0.036939313984168866,
+    "f1": 0.5790080738177624,
+    "support": 251
+   },
+   "macro_f1": 0.3251274465780924,
+   "auc": 0.8681054147525992
+  },
+  "gauss-0.01": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     0,
+     251
+    ],
+    [
+     0,
+     379
+    ]
+   ],
+   "accuracy": 0.6015873015873016,
+   "standard": {
+    "precision": 0.6015873015873016,
+    "recall": 1.0,
+    "specificity": 0.0,
+    "f1": 0.7512388503468781,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": NaN,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "f1": 0.0,
+    "support": 251
+   },
+   "macro_f1": 0.37561942517343905,
+   "auc": 0.35504420313469076
+  },
+  "gauss-0.05": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     0,
+     251
+    ],
+    [
+     0,
+     379
+    ]
+   ],
+   "accuracy": 0.6015873015873016,
+   "standard": {
+    "precision": 0.6015873015873016,
+    "recall": 1.0,
+    "specificity": 0.0,
+    "f1": 0.7512388503468781,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": NaN,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "f1": 0.0,
+    "support": 251
+   },
+   "macro_f1": 0.37561942517343905,
+   "auc": 0.4121981730071797
+  },
+  "gauss-0.10": {
+   "n": 630,
+   "threshold": 0.5,
+   "confusion_matrix": [
+    [
+     0,
+     251
+    ],
+    [
+     0,
+     379
+    ]
+   ],
+   "accuracy": 0.6015873015873016,
+   "standard": {
+    "precision": 0.6015873015873016,
+    "recall": 1.0,
+    "specificity": 0.0,
+    "f1": 0.7512388503468781,
+    "support": 379
+   },
+   "non_standard": {
+    "precision": NaN,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "f1": 0.0,
+    "support": 251
+   },
+   "macro_f1": 0.37561942517343905,
+   "auc": 0.4402810919908755
+  }
+ },
+ "clean_check": {
+  "metrics_test_auc": 0.7545333179156724,
+  "robustness_clean_auc": 0.7545333179156724,
+  "ok": true
+ },
+ "seconds": 5.216048240661621
+}

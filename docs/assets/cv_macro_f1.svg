@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="352" viewBox="0 0 820 352" role="img" aria-label="Cross-validation macro-F1 of the 7 classifiers">
+<title>Cross-validation macro-F1 of the 7 classifiers</title>
+<style>
+svg { --surface: #ffffff; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7;
+      --card: #f6f8fa; --line: #d0d7de; --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface: #0d1117; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+        --card: #161b22; --line: #30363d; --s1: #3987e5; --s2: #d95926; --s3: #199e70; }
+}
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--ink2); font-size: 12px; }
+.title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+.sub { fill: var(--ink2); font-size: 12px; }
+.lab { fill: var(--ink); font-size: 12.5px; }
+.val { fill: var(--ink2); font-size: 11.5px; font-variant-numeric: tabular-nums;
+       paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.axis { stroke: var(--axis); stroke-width: 1; }
+.ref { stroke: var(--ink2); stroke-width: 1.5; }
+.floor { stroke: var(--muted); stroke-width: 1.5; }
+.ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+<text x="20.0" y="26.0" class="title" text-anchor="start">Standard-plane classification</text>
+<text x="20.0" y="46.0" class="sub" text-anchor="start">Macro-F1 (%) in 5-fold patient-grouped cross-validation · dots: folds · bar: mean ± SD</text>
+<line x1="190.0" y1="62.0" x2="190.0" y2="308.0" class="grid"/>
+<text x="190.0" y="324.0" class="tick" text-anchor="middle">55</text>
+<line x1="262.9" y1="62.0" x2="262.9" y2="308.0" class="grid"/>
+<text x="262.9" y="324.0" class="tick" text-anchor="middle">60</text>
+<line x1="335.7" y1="62.0" x2="335.7" y2="308.0" class="grid"/>
+<text x="335.7" y="324.0" class="tick" text-anchor="middle">65</text>
+<line x1="408.6" y1="62.0" x2="408.6" y2="308.0" class="grid"/>
+<text x="408.6" y="324.0" class="tick" text-anchor="middle">70</text>
+<line x1="481.4" y1="62.0" x2="481.4" y2="308.0" class="grid"/>
+<text x="481.4" y="324.0" class="tick" text-anchor="middle">75</text>
+<line x1="554.3" y1="62.0" x2="554.3" y2="308.0" class="grid"/>
+<text x="554.3" y="324.0" class="tick" text-anchor="middle">80</text>
+<line x1="627.1" y1="62.0" x2="627.1" y2="308.0" class="grid"/>
+<text x="627.1" y="324.0" class="tick" text-anchor="middle">85</text>
+<line x1="700.0" y1="62.0" x2="700.0" y2="308.0" class="grid"/>
+<text x="700.0" y="324.0" class="tick" text-anchor="middle">90</text>
+<text x="178.0" y="91.0" class="lab" text-anchor="end">SqueezeNet 1.1</text>
+<line x1="428.9" y1="87.0" x2="553.8" y2="87.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="515.5" cy="87.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>SqueezeNet 1.1, fold 0: 77.3%</title></circle>
+<circle cx="500.7" cy="87.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>SqueezeNet 1.1, fold 1: 76.3%</title></circle>
+<circle cx="534.2" cy="87.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>SqueezeNet 1.1, fold 2: 78.6%</title></circle>
+<circle cx="381.8" cy="87.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>SqueezeNet 1.1, fold 3: 68.2%</title></circle>
+<circle cx="524.5" cy="87.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>SqueezeNet 1.1, fold 4: 78.0%</title></circle>
+<circle cx="491.3" cy="87.0" r="6.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>SqueezeNet 1.1: mean 75.7 ± 4.3%</title></circle>
+<text x="712.0" y="91.0" class="val" text-anchor="start">75.7 ± 4.3</text>
+<text x="178.0" y="125.0" class="lab" text-anchor="end">MobileNetV2</text>
+<line x1="401.0" y1="121.0" x2="570.1" y2="121.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="629.4" cy="121.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV2, fold 0: 85.2%</title></circle>
+<circle cx="427.5" cy="121.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV2, fold 1: 71.3%</title></circle>
+<circle cx="490.5" cy="121.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV2, fold 2: 75.6%</title></circle>
+<circle cx="425.7" cy="121.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV2, fold 3: 71.2%</title></circle>
+<circle cx="454.6" cy="121.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV2, fold 4: 73.2%</title></circle>
+<circle cx="485.6" cy="121.0" r="6.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>MobileNetV2: mean 75.3 ± 5.8%</title></circle>
+<text x="712.0" y="125.0" class="val" text-anchor="start">75.3 ± 5.8</text>
+<text x="178.0" y="159.0" class="lab" text-anchor="end">ShuffleNetV2 1.0x</text>
+<line x1="384.4" y1="155.0" x2="553.1" y2="155.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="511.1" cy="155.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ShuffleNetV2 1.0x, fold 0: 77.0%</title></circle>
+<circle cx="320.6" cy="155.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ShuffleNetV2 1.0x, fold 1: 64.0%</title></circle>
+<circle cx="514.0" cy="155.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ShuffleNetV2 1.0x, fold 2: 77.2%</title></circle>
+<circle cx="478.6" cy="155.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ShuffleNetV2 1.0x, fold 3: 74.8%</title></circle>
+<circle cx="519.4" cy="155.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ShuffleNetV2 1.0x, fold 4: 77.6%</title></circle>
+<circle cx="468.7" cy="155.0" r="6.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>ShuffleNetV2 1.0x: mean 74.1 ± 5.8%</title></circle>
+<text x="712.0" y="159.0" class="val" text-anchor="start">74.1 ± 5.8</text>
+<text x="178.0" y="193.0" class="lab" text-anchor="end">ResNet-152</text>
+<line x1="437.1" y1="189.0" x2="492.8" y2="189.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="479.9" cy="189.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ResNet-152, fold 0: 74.9%</title></circle>
+<circle cx="416.2" cy="189.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ResNet-152, fold 1: 70.5%</title></circle>
+<circle cx="485.3" cy="189.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ResNet-152, fold 2: 75.3%</title></circle>
+<circle cx="472.2" cy="189.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ResNet-152, fold 3: 74.4%</title></circle>
+<circle cx="471.2" cy="189.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>ResNet-152, fold 4: 74.3%</title></circle>
+<circle cx="465.0" cy="189.0" r="6.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>ResNet-152: mean 73.9 ± 1.9%</title></circle>
+<text x="712.0" y="193.0" class="val" text-anchor="start">73.9 ± 1.9</text>
+<text x="178.0" y="227.0" class="lab" text-anchor="end">MobileNetV3-Large</text>
+<line x1="321.1" y1="223.0" x2="559.9" y2="223.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="571.5" cy="223.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV3-Large, fold 0: 81.2%</title></circle>
+<circle cx="307.5" cy="223.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV3-Large, fold 1: 63.1%</title></circle>
+<circle cx="521.0" cy="223.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV3-Large, fold 2: 77.7%</title></circle>
+<circle cx="480.8" cy="223.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV3-Large, fold 3: 75.0%</title></circle>
+<circle cx="321.9" cy="223.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>MobileNetV3-Large, fold 4: 64.1%</title></circle>
+<circle cx="440.5" cy="223.0" r="6.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>MobileNetV3-Large: mean 72.2 ± 8.2%</title></circle>
+<text x="712.0" y="227.0" class="val" text-anchor="start">72.2 ± 8.2</text>
+<text x="178.0" y="261.0" class="lab" text-anchor="end">PSFHSP-Net</text>
+<line x1="324.3" y1="257.0" x2="539.4" y2="257.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="517.1" cy="257.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>PSFHSP-Net, fold 0: 77.4%</title></circle>
+<circle cx="248.3" cy="257.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>PSFHSP-Net, fold 1: 59.0%</title></circle>
+<circle cx="445.8" cy="257.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>PSFHSP-Net, fold 2: 72.6%</title></circle>
+<circle cx="502.0" cy="257.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>PSFHSP-Net, fold 3: 76.4%</title></circle>
+<circle cx="446.1" cy="257.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>PSFHSP-Net, fold 4: 72.6%</title></circle>
+<circle cx="431.9" cy="257.0" r="6.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>PSFHSP-Net: mean 71.6 ± 7.4%</title></circle>
+<text x="712.0" y="261.0" class="val" text-anchor="start">71.6 ± 7.4</text>
+<text x="178.0" y="295.0" class="lab" text-anchor="end" style="font-weight: 600">DeepFetalNet (proposed)</text>
+<line x1="362.8" y1="291.0" x2="486.9" y2="291.0" class="" style="stroke: var(--s1); stroke-width: 2; stroke-linecap: round"/>
+<circle cx="437.0" cy="291.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>DeepFetalNet, fold 0: 72.0%</title></circle>
+<circle cx="327.5" cy="291.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>DeepFetalNet, fold 1: 64.4%</title></circle>
+<circle cx="435.3" cy="291.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>DeepFetalNet, fold 2: 71.8%</title></circle>
+<circle cx="500.2" cy="291.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>DeepFetalNet, fold 3: 76.3%</title></circle>
+<circle cx="424.0" cy="291.0" r="4" class="ring" style="fill: var(--s1); fill-opacity: 0.45"><title>DeepFetalNet, fold 4: 71.1%</title></circle>
+<circle cx="424.8" cy="291.0" r="6.5" class="ring" style="fill: var(--s1); fill-opacity: 1.0"><title>DeepFetalNet: mean 71.1 ± 4.3%</title></circle>
+<text x="712.0" y="295.0" class="val" text-anchor="start">71.1 ± 4.3</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="250" viewBox="0 0 1060 250" role="img" aria-label="FetalIntrapartumNet pipeline: standard-plane selection, FH/PS segmentation and AoP measurement">
+<title>FetalIntrapartumNet pipeline: standard-plane selection, FH/PS segmentation and AoP measurement</title>
+<style>
+svg { --surface: #ffffff; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7;
+      --card: #f6f8fa; --line: #d0d7de; --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface: #0d1117; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+        --card: #161b22; --line: #30363d; --s1: #3987e5; --s2: #d95926; --s3: #199e70; }
+}
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--ink2); font-size: 12px; }
+.title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+.sub { fill: var(--ink2); font-size: 12px; }
+.lab { fill: var(--ink); font-size: 12.5px; }
+.val { fill: var(--ink2); font-size: 11.5px; font-variant-numeric: tabular-nums;
+       paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.axis { stroke: var(--axis); stroke-width: 1; }
+.ref { stroke: var(--ink2); stroke-width: 1.5; }
+.floor { stroke: var(--muted); stroke-width: 1.5; }
+.ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect x="20" y="48" width="222" height="112" rx="10" style="fill: var(--card); stroke: var(--line); stroke-width: 1"/>
+<text x="36.0" y="82.0" class="title" text-anchor="start" style="font-size: 14px">Ultrasound frame</text>
+<text x="36.0" y="108.0" class="sub" text-anchor="start">Intrapartum transperineal</text>
+<text x="36.0" y="128.0" class="sub" text-anchor="start">JNU-IFM · IUGC 2024 · IUGC 2025</text>
+<rect x="286" y="48" width="222" height="112" rx="10" style="fill: var(--card); stroke: var(--line); stroke-width: 1"/>
+<rect x="286" y="48" width="222" height="5" rx="2.5" style="fill: var(--s1)"/>
+<text x="302.0" y="82.0" class="title" text-anchor="start" style="font-size: 14px">1  Standard-plane selection</text>
+<text x="302.0" y="108.0" class="sub" text-anchor="start">Standard vs non-standard</text>
+<text x="302.0" y="128.0" class="sub" text-anchor="start">DeepFetalNet + 6 baselines</text>
+<rect x="552" y="48" width="222" height="112" rx="10" style="fill: var(--card); stroke: var(--line); stroke-width: 1"/>
+<rect x="552" y="48" width="222" height="5" rx="2.5" style="fill: var(--s2)"/>
+<text x="568.0" y="82.0" class="title" text-anchor="start" style="font-size: 14px">2  FH / PS segmentation</text>
+<text x="568.0" y="108.0" class="sub" text-anchor="start">Fetal head and pubic symphysis</text>
+<text x="568.0" y="128.0" class="sub" text-anchor="start">AoP-GAU-Net + 3 baselines</text>
+<rect x="818" y="48" width="222" height="112" rx="10" style="fill: var(--card); stroke: var(--line); stroke-width: 1"/>
+<rect x="818" y="48" width="222" height="5" rx="2.5" style="fill: var(--s3)"/>
+<text x="834.0" y="82.0" class="title" text-anchor="start" style="font-size: 14px">3  Angle of progression</text>
+<text x="834.0" y="108.0" class="sub" text-anchor="start">Ellipse–tangent geometry</text>
+<text x="834.0" y="128.0" class="sub" text-anchor="start">(FH-PS-AoP challenge code)</text>
+<line x1="248.0" y1="104.0" x2="278.0" y2="104.0" class="" style="stroke: var(--ink2); stroke-width: 2"/>
+<path d="M270,99.0 L278,104.0 L270,109.0" style="fill: none; stroke: var(--ink2); stroke-width: 2"/>
+<line x1="514.0" y1="104.0" x2="544.0" y2="104.0" class="" style="stroke: var(--ink2); stroke-width: 2"/>
+<path d="M536,99.0 L544,104.0 L536,109.0" style="fill: none; stroke: var(--ink2); stroke-width: 2"/>
+<line x1="780.0" y1="104.0" x2="810.0" y2="104.0" class="" style="stroke: var(--ink2); stroke-width: 2"/>
+<path d="M802,99.0 L810,104.0 L802,109.0" style="fill: none; stroke: var(--ink2); stroke-width: 2"/>
+<line x1="397.0" y1="162.0" x2="397.0" y2="188.0" class="" style="stroke: var(--muted); stroke-width: 1.5"/>
+<text x="397.0" y="206.0" class="sub" text-anchor="middle">non-standard frames are not measured</text>
+<line x1="663.0" y1="162.0" x2="663.0" y2="188.0" class="" style="stroke: var(--muted); stroke-width: 1.5"/>
+<text x="663.0" y="206.0" class="sub" text-anchor="middle">AoP-GAU-Net also regresses the AoP</text>
+<text x="20.0" y="26.0" class="title" text-anchor="start">Pipeline</text>
+<text x="110.0" y="26.0" class="sub" text-anchor="start">each stage is trained and evaluated separately, then chained end to end</text>
+</svg>
